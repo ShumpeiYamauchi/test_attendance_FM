@@ -136,12 +136,12 @@
 </tr>
 <tr class="regularcharttext" vAlign="top">
 <td><a href="#132BaseTableAnchor_">集計</a></td><td>
-<div align="left"><a href="#132BaseTableAnchor_">19 フィールド</a> 定義済, 2 レコード</div>
+<div align="left"><a href="#132BaseTableAnchor_">18 フィールド</a> 定義済, 2 レコード</div>
 </td><td><a href="#1065092TableAnchor_"><em>集計</em></a></td>
 </tr>
 <tr class="regularcharttext" vAlign="top">
 <td><a href="#130BaseTableAnchor_">労働時間</a></td><td>
-<div align="left"><a href="#130BaseTableAnchor_">20 フィールド</a> 定義済, 4 レコード</div>
+<div align="left"><a href="#130BaseTableAnchor_">18 フィールド</a> 定義済, 4 レコード</div>
 </td><td><a href="#1065090TableAnchor_"><em>労働時間</em></a></td>
 </tr>
 </tbody>
@@ -377,7 +377,7 @@
 		<table width="100%" border="1">
 <tbody>
 <tr class="privsetfirst" vAlign="top">
-<td colSpan="9">テーブル名: <a name="132BaseTableAnchor_"/>集計 - 19 フィールド</td>
+<td colSpan="9">テーブル名: <a name="132BaseTableAnchor_"/>集計 - 18 フィールド</td>
 </tr>
 <tr class="chartheaders" vAlign="top">
 <td width="8%">フィールド名</td><td width="7%">タイプ</td><td width="14%">オプション</td><td width="10%">コメント</td><td width="13%">レイアウト上</td><td width="15%">リレーションシップ内</td><td width="22%">スクリプト内</td><td width="11%">値一覧内</td>
@@ -521,7 +521,7 @@
 <td><a name="13214FieldAnchor_"/>アラート文面C</td><td>計算結果, 数字</td><td><strong>計算:</strong>
 <ul>
 <li>コンテキストテーブル: <a href="#1065092TableAnchor_"><em>集計</em></a></li>
-<li><a href="#13212FieldAnchor_"><em>集計</em>::名前</a> &amp; "さま" &amp; "&para;&para;" &amp; 
+<li><a href="#1296FieldAnchor_"><em>スタッフ情報</em>::名前</a> &amp; "さま" &amp; "&para;&para;" &amp; 
 
 "今月の残業時間が 12 時間を超過しました。"  &amp; "&para;" &amp;
 
@@ -549,7 +549,7 @@
 <td><a name="13215FieldAnchor_"/>アラート文面B</td><td>計算結果, 数字</td><td><strong>計算:</strong>
 <ul>
 <li>コンテキストテーブル: <a href="#1065092TableAnchor_"><em>集計</em></a></li>
-<li><a href="#13212FieldAnchor_"><em>集計</em>::名前</a> &amp; "さま" &amp; "&para;&para;" &amp; 
+<li><a href="#1296FieldAnchor_"><em>スタッフ情報</em>::名前</a> &amp; "さま" &amp; "&para;&para;" &amp; 
 
 "今月の残業時間が 23 時間を超過しました。"  &amp; "&para;" &amp;
 
@@ -577,7 +577,7 @@
 <td><a name="13216FieldAnchor_"/>アラート文面A</td><td>計算結果, 数字</td><td><strong>計算:</strong>
 <ul>
 <li>コンテキストテーブル: <a href="#1065092TableAnchor_"><em>集計</em></a></li>
-<li><a href="#13212FieldAnchor_"><em>集計</em>::名前</a> &amp; "さま" &amp; "&para;&para;" &amp; 
+<li><a href="#1296FieldAnchor_"><em>スタッフ情報</em>::名前</a> &amp; "さま" &amp; "&para;&para;" &amp; 
 
 "今月の残業時間が 45 時間を超過しました。"  &amp; "&para;" &amp;
 
@@ -633,7 +633,7 @@
 </td>
 </tr>
 			<tr class="regularcharttext" vAlign="top">
-<td><a name="13221FieldAnchor_"/>■■ソート■■</td><td>標準, テキスト</td><td><strong>入力値の自動化:</strong>
+<td><a name="13221FieldAnchor_"/>■■リレーション■■</td><td>標準, テキスト</td><td><strong>入力値の自動化:</strong>
 <ul>
 <li>編集を許可</li>
 </ul>
@@ -692,21 +692,30 @@
 </td>
 </tr>
 			<tr class="regularcharttext" vAlign="top">
-<td><a name="13212FieldAnchor_"/>名前</td><td>計算結果, 数字</td><td><strong>計算:</strong>
+<td><a name="1326FieldAnchor_"/>対象スタッフキー</td><td>標準, 数字</td><td><strong>入力値の自動化:</strong>
 <ul>
-<li>コンテキストテーブル: <a href="#1065092TableAnchor_"><em>集計</em></a></li>
-<li><a href="#1296FieldAnchor_"><em>スタッフ情報</em>::名前</a></li>
+<li>編集を許可</li>
+</ul>
+<strong>入力値の制限:</strong>
+<ul>
+<li>データの入力時のみ</li>
 </ul>
 <strong>データの格納:</strong>
 <ul>
 <li>繰り返し: 1</li>
-<li>計算結果を保存しない</li>
+<li>索引: すべて</li>
 <li>索引設定言語: 日本語</li>
 </ul>
 </td><td></td><td>
-<ul></ul>
+<ul>
+<li><a href="#16LayoutAnchor_">集計詳細/入力</a></li>
+<li><a href="#21LayoutAnchor_">集計一覧</a></li>
+</ul>
 </td><td>
-<ul></ul>
+<ul>
+<li><a href="#集計&infin;労働時間RelationshipAnchor_"><em>集計&infin;労働時間</em></a></li>
+<li><a href="#集計=スタッフ情報RelationshipAnchor_"><em>集計=スタッフ情報</em></a></li>
+</ul>
 </td><td>
 <ul></ul>
 </td><td>
@@ -882,44 +891,13 @@
 <ul></ul>
 </td>
 </tr>
-			<tr class="regularcharttext" vAlign="top">
-<td><a name="1326FieldAnchor_"/>対象スタッフキー</td><td>標準, 数字</td><td><strong>入力値の自動化:</strong>
-<ul>
-<li>編集を許可</li>
-</ul>
-<strong>入力値の制限:</strong>
-<ul>
-<li>データの入力時のみ</li>
-</ul>
-<strong>データの格納:</strong>
-<ul>
-<li>繰り返し: 1</li>
-<li>索引: すべて</li>
-<li>索引設定言語: 日本語</li>
-</ul>
-</td><td></td><td>
-<ul>
-<li><a href="#16LayoutAnchor_">集計詳細/入力</a></li>
-<li><a href="#21LayoutAnchor_">集計一覧</a></li>
-</ul>
-</td><td>
-<ul>
-<li><a href="#集計&infin;労働時間RelationshipAnchor_"><em>集計&infin;労働時間</em></a></li>
-<li><a href="#集計=スタッフ情報RelationshipAnchor_"><em>集計=スタッフ情報</em></a></li>
-</ul>
-</td><td>
-<ul></ul>
-</td><td>
-<ul></ul>
-</td>
-</tr>
 		</tbody>
 </table>
 	<br>
 		<table width="100%" border="1">
 <tbody>
 <tr class="privsetfirst" vAlign="top">
-<td colSpan="9">テーブル名: <a name="130BaseTableAnchor_"/>労働時間 - 20 フィールド</td>
+<td colSpan="9">テーブル名: <a name="130BaseTableAnchor_"/>労働時間 - 18 フィールド</td>
 </tr>
 <tr class="chartheaders" vAlign="top">
 <td width="8%">フィールド名</td><td width="7%">タイプ</td><td width="14%">オプション</td><td width="10%">コメント</td><td width="13%">レイアウト上</td><td width="15%">リレーションシップ内</td><td width="22%">スクリプト内</td><td width="11%">値一覧内</td>
@@ -938,28 +916,6 @@
 <li>繰り返し: 1</li>
 <li>索引: なし</li>
 <li>必要時に索引を自動作成</li>
-<li>索引設定言語: 日本語</li>
-</ul>
-</td><td></td><td>
-<ul></ul>
-</td><td>
-<ul></ul>
-</td><td>
-<ul></ul>
-</td><td>
-<ul></ul>
-</td>
-</tr>
-			<tr class="regularcharttext" vAlign="top">
-<td><a name="13018FieldAnchor_"/>名前</td><td>計算結果, 数字</td><td><strong>計算:</strong>
-<ul>
-<li>コンテキストテーブル: <a href="#1065090TableAnchor_"><em>労働時間</em></a></li>
-<li><a href="#1296FieldAnchor_"><em>スタッフ情報</em>::名前</a></li>
-</ul>
-<strong>データの格納:</strong>
-<ul>
-<li>繰り返し: 1</li>
-<li>計算結果を保存しない</li>
 <li>索引設定言語: 日本語</li>
 </ul>
 </td><td></td><td>
@@ -1040,6 +996,7 @@
 			<tr class="regularcharttext" vAlign="top">
 <td><a name="13010FieldAnchor_"/>休み時間</td><td>標準, 数字</td><td><strong>入力値の自動化:</strong>
 <ul>
+<li>定数データ: 0</li>
 <li>編集を許可</li>
 </ul>
 <strong>入力値の制限:</strong>
@@ -1074,6 +1031,7 @@
 <strong>入力値の制限:</strong>
 <ul>
 <li>データの入力時のみ</li>
+<li>タイプ: 時刻</li>
 </ul>
 <strong>データの格納:</strong>
 <ul>
@@ -1103,6 +1061,7 @@
 <strong>入力値の制限:</strong>
 <ul>
 <li>データの入力時のみ</li>
+<li>タイプ: 時刻</li>
 </ul>
 <strong>データの格納:</strong>
 <ul>
@@ -1151,7 +1110,57 @@
 </td>
 </tr>
 			<tr class="regularcharttext" vAlign="top">
-<td><a name="13022FieldAnchor_"/>■■ソート■■</td><td>標準, 日付</td><td><strong>入力値の自動化:</strong>
+<td><a name="13022FieldAnchor_"/>■■ソート■■</td><td>標準, テキスト</td><td><strong>入力値の自動化:</strong>
+<ul>
+<li>編集を許可</li>
+</ul>
+<strong>入力値の制限:</strong>
+<ul>
+<li>データの入力時のみ</li>
+</ul>
+<strong>データの格納:</strong>
+<ul>
+<li>繰り返し: 1</li>
+<li>索引: なし</li>
+<li>必要時に索引を自動作成</li>
+<li>索引設定言語: 日本語</li>
+</ul>
+</td><td></td><td>
+<ul></ul>
+</td><td>
+<ul></ul>
+</td><td>
+<ul></ul>
+</td><td>
+<ul></ul>
+</td>
+</tr>
+			<tr class="regularcharttext" vAlign="top">
+<td><a name="13019FieldAnchor_"/>日付スタッフソート</td><td>計算結果, 数字</td><td><strong>計算:</strong>
+<ul>
+<li>コンテキストテーブル: <a href="#1065090TableAnchor_"><em>労働時間</em></a></li>
+<li>
+<strong>GetAsText</strong> ( <a href="#1307FieldAnchor_"><em>労働時間</em>::労働日</a> ) &amp;"1" &amp; <strong>Right</strong>("000" &amp; <strong>GetAsText</strong> ( <a href="#1306FieldAnchor_"><em>労働時間</em>::スタッフ外部キー</a> ); 4)</li>
+</ul>
+<strong>データの格納:</strong>
+<ul>
+<li>繰り返し: 1</li>
+<li>索引: なし</li>
+<li>必要時に索引を自動作成</li>
+<li>索引設定言語: 日本語</li>
+</ul>
+</td><td></td><td>
+<ul></ul>
+</td><td>
+<ul></ul>
+</td><td>
+<ul></ul>
+</td><td>
+<ul></ul>
+</td>
+</tr>
+			<tr class="regularcharttext" vAlign="top">
+<td><a name="13025FieldAnchor_"/>■■リレーション■■</td><td>標準, テキスト</td><td><strong>入力値の自動化:</strong>
 <ul>
 <li>編集を許可</li>
 </ul>
@@ -1197,78 +1206,6 @@
 <ul>
 <li><a href="#集計&infin;労働時間RelationshipAnchor_"><em>集計&infin;労働時間</em></a></li>
 </ul>
-</td><td>
-<ul></ul>
-</td><td>
-<ul></ul>
-</td>
-</tr>
-			<tr class="regularcharttext" vAlign="top">
-<td><a name="13020FieldAnchor_"/>月別スタッフ</td><td>計算結果, 数字</td><td><strong>計算:</strong>
-<ul>
-<li>コンテキストテーブル: <a href="#1065090TableAnchor_"><em>労働時間</em></a></li>
-<li><a href="#13014FieldAnchor_"><em>労働時間</em>::月別ソート</a> &amp; <strong>Right</strong>( "000" &amp; <a href="#1306FieldAnchor_"><em>労働時間</em>::スタッフ外部キー</a>; 4)</li>
-</ul>
-<strong>データの格納:</strong>
-<ul>
-<li>繰り返し: 1</li>
-<li>索引: なし</li>
-<li>必要時に索引を自動作成</li>
-<li>索引設定言語: 日本語</li>
-</ul>
-</td><td></td><td>
-<ul></ul>
-</td><td>
-<ul></ul>
-</td><td>
-<ul></ul>
-</td><td>
-<ul></ul>
-</td>
-</tr>
-			<tr class="regularcharttext" vAlign="top">
-<td><a name="13019FieldAnchor_"/>スタッフ日付</td><td>計算結果, 数字</td><td><strong>計算:</strong>
-<ul>
-<li>コンテキストテーブル: <a href="#1065090TableAnchor_"><em>労働時間</em></a></li>
-<li>"1" &amp; <strong>Right</strong>("000" &amp; <strong>GetAsText</strong> ( <a href="#1306FieldAnchor_"><em>労働時間</em>::スタッフ外部キー</a> ); 4) &amp; <strong>GetAsText</strong> ( <a href="#1307FieldAnchor_"><em>労働時間</em>::労働日</a> )</li>
-</ul>
-<strong>データの格納:</strong>
-<ul>
-<li>繰り返し: 1</li>
-<li>索引: なし</li>
-<li>必要時に索引を自動作成</li>
-<li>索引設定言語: 日本語</li>
-</ul>
-</td><td></td><td>
-<ul></ul>
-</td><td>
-<ul></ul>
-</td><td>
-<ul></ul>
-</td><td>
-<ul></ul>
-</td>
-</tr>
-			<tr class="regularcharttext" vAlign="top">
-<td><a name="13025FieldAnchor_"/>■■リレーション■■</td><td>標準, テキスト</td><td><strong>入力値の自動化:</strong>
-<ul>
-<li>編集を許可</li>
-</ul>
-<strong>入力値の制限:</strong>
-<ul>
-<li>データの入力時のみ</li>
-</ul>
-<strong>データの格納:</strong>
-<ul>
-<li>繰り返し: 1</li>
-<li>索引: なし</li>
-<li>必要時に索引を自動作成</li>
-<li>索引設定言語: 日本語</li>
-</ul>
-</td><td></td><td>
-<ul></ul>
-</td><td>
-<ul></ul>
 </td><td>
 <ul></ul>
 </td><td>
@@ -1498,33 +1435,6 @@
 <td width="9%">テーブルオカレンス</td><td width="13%">ソーステーブル</td><td width="11%">ソースファイル</td><td width="16%">リレーションシップ内</td><td width="12%">スクリプト内</td><td width="16%">フィールド定義内</td><td width="13%">値一覧内</td><td width="10%">関連付けられているレイアウト</td>
 </tr>
 <tr class="regularcharttext" vAlign="top">
-<td bgColor="#787878"><a name="1065092TableAnchor_"/><em>集計</em></td><td><a href="#132BaseTableAnchor_">集計</a></td><td>attendance.fmp12</td><td>
-<ul>
-<li><a href="#集計&infin;労働時間RelationshipAnchor_"><em>集計&infin;労働時間</em></a></li>
-<li><a href="#集計=スタッフ情報RelationshipAnchor_"><em>集計=スタッフ情報</em></a></li>
-</ul>
-</td><td>
-<ul>
-<li><a href="#8ScriptAnchor_">アラート送信</a></li>
-</ul>
-</td><td>
-<ul>
-<li><a href="#13213FieldAnchor_"><em>集計</em>::残業区分</a></li>
-<li><a href="#13214FieldAnchor_"><em>集計</em>::アラート文面C</a></li>
-<li><a href="#13215FieldAnchor_"><em>集計</em>::アラート文面B</a></li>
-<li><a href="#13216FieldAnchor_"><em>集計</em>::アラート文面A</a></li>
-</ul>
-</td><td>
-<ul></ul>
-</td><td>
-<ul>
-<li><a href="#16LayoutAnchor_">集計詳細/入力</a></li>
-<li><a href="#19LayoutAnchor_">労働時間詳細/入力</a></li>
-<li><a href="#21LayoutAnchor_">集計一覧</a></li>
-</ul>
-</td>
-</tr>
-<tr class="regularcharttext" vAlign="top">
 <td bgColor="#787878"><a name="1065090TableAnchor_"/><em>労働時間</em></td><td><a href="#130BaseTableAnchor_">労働時間</a></td><td>attendance.fmp12</td><td>
 <ul>
 <li><a href="#集計&infin;労働時間RelationshipAnchor_"><em>集計&infin;労働時間</em></a></li>
@@ -1537,9 +1447,8 @@
 <li><a href="#1329FieldAnchor_"><em>集計</em>::累計労働時間</a></li>
 <li><a href="#13011FieldAnchor_"><em>労働時間</em>::労働時間</a></li>
 <li><a href="#13012FieldAnchor_"><em>労働時間</em>::残業時間</a></li>
+<li><a href="#13019FieldAnchor_"><em>労働時間</em>::日付スタッフソート</a></li>
 <li><a href="#13014FieldAnchor_"><em>労働時間</em>::月別ソート</a></li>
-<li><a href="#13020FieldAnchor_"><em>労働時間</em>::月別スタッフ</a></li>
-<li><a href="#13019FieldAnchor_"><em>労働時間</em>::スタッフ日付</a></li>
 </ul>
 </td><td>
 <ul></ul>
@@ -1547,6 +1456,30 @@
 <ul>
 <li><a href="#19LayoutAnchor_">労働時間詳細/入力</a></li>
 <li><a href="#2LayoutAnchor_">労働時間一覧</a></li>
+</ul>
+</td>
+</tr>
+<tr class="regularcharttext" vAlign="top">
+<td bgColor="#787878"><a name="1065092TableAnchor_"/><em>集計</em></td><td><a href="#132BaseTableAnchor_">集計</a></td><td>attendance.fmp12</td><td>
+<ul>
+<li><a href="#集計&infin;労働時間RelationshipAnchor_"><em>集計&infin;労働時間</em></a></li>
+<li><a href="#集計=スタッフ情報RelationshipAnchor_"><em>集計=スタッフ情報</em></a></li>
+</ul>
+</td><td>
+<ul>
+<li><a href="#8ScriptAnchor_">アラート送信</a></li>
+</ul>
+</td><td>
+<ul>
+<li><a href="#13213FieldAnchor_"><em>集計</em>::残業区分</a></li>
+</ul>
+</td><td>
+<ul></ul>
+</td><td>
+<ul>
+<li><a href="#16LayoutAnchor_">集計詳細/入力</a></li>
+<li><a href="#19LayoutAnchor_">労働時間詳細/入力</a></li>
+<li><a href="#21LayoutAnchor_">集計一覧</a></li>
 </ul>
 </td>
 </tr>
@@ -1561,8 +1494,9 @@
 </ul>
 </td><td>
 <ul>
-<li><a href="#13212FieldAnchor_"><em>集計</em>::名前</a></li>
-<li><a href="#13018FieldAnchor_"><em>労働時間</em>::名前</a></li>
+<li><a href="#13214FieldAnchor_"><em>集計</em>::アラート文面C</a></li>
+<li><a href="#13215FieldAnchor_"><em>集計</em>::アラート文面B</a></li>
+<li><a href="#13216FieldAnchor_"><em>集計</em>::アラート文面A</a></li>
 </ul>
 </td><td>
 <ul>
