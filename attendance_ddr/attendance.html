@@ -22,10 +22,10 @@
 <td class="chartheadersnobg">リレーションシップ</td><td class="regularcharttext"><a href="#valRelationshipsSectionAnchor_">2</a></td>
 </tr>
 <tr>
-<td class="chartheadersnobg">レイアウト</td><td class="regularcharttext"><a href="#valLayoutsSectionAnchor_">20</a></td>
+<td class="chartheadersnobg">レイアウト</td><td class="regularcharttext"><a href="#valLayoutsSectionAnchor_">21</a></td>
 </tr>
 <tr>
-<td class="chartheadersnobg">スクリプト</td><td class="regularcharttext"><a href="#valScriptsSectionAnchor_">5</a></td>
+<td class="chartheadersnobg">スクリプト</td><td class="regularcharttext"><a href="#valScriptsSectionAnchor_">6</a></td>
 </tr>
 <tr>
 <td class="chartheadersnobg">値一覧</td><td class="regularcharttext"><a href="#valValueListsSectionAnchor_">2</a></td>
@@ -141,7 +141,7 @@
 </tr>
 <tr class="regularcharttext" vAlign="top">
 <td><a href="#130BaseTableAnchor_">日別労働時間</a></td><td>
-<div align="left"><a href="#130BaseTableAnchor_">20 フィールド</a> 定義済, 4 レコード</div>
+<div align="left"><a href="#130BaseTableAnchor_">20 フィールド</a> 定義済, 7 レコード</div>
 </td><td><a href="#1065090TableAnchor_"><em>スタッフ_月別集計_日別労働時間</em></a></td>
 </tr>
 </tbody>
@@ -1405,7 +1405,7 @@
 			<tr class="regularcharttext" vAlign="top">
 <td><a name="1301FieldAnchor_"/>主キー</td><td>標準, 数字</td><td><strong>入力値の自動化:</strong>
 <ul>
-<li>シリアル: 作成: 作成時, 次の値: 13, 増分: 1</li>
+<li>シリアル: 作成: 作成時, 次の値: 17, 増分: 1</li>
 </ul>
 <strong>入力値の制限:</strong>
 <ul>
@@ -1764,9 +1764,15 @@
 <tr class="regularcharttext" valign="top">
 <td><a name="22LayoutAnchor_"/>ホーム</td><td>はい</td><td>はい</td><td>
 <ul>
-<li><a href="#22LayoutObjectsAnchor_ボタン">6 ボタン</a></li>
+<li><a href="#22LayoutObjectsAnchor_ボタン">7 ボタン</a></li>
 </ul>
-</td><td><a href="#1065089TableAnchor_"><em>スタッフ情報</em></a></td><td>オン</td><td>オフ</td><td>オン</td><td>オフ</td><td></td><td>[ファイルデフォルト]</td><td></td><td><a href="#03valThemesSectionAnchor_">03</a></td>
+</td><td><a href="#1065089TableAnchor_"><em>スタッフ情報</em></a></td><td>オン</td><td>オフ</td><td>オン</td><td>オフ</td><td></td><td>[ファイルデフォルト]</td><td>
+<ul>
+<b>OnLayoutEnter</b>
+<li>スクリプト: <a href="#8ScriptAnchor_">アラート送信</a></li>
+<li>モード: ブラウズ</li>
+</ul>
+</td><td><a href="#03valThemesSectionAnchor_">03</a></td>
 </tr>
 <tr class="regularcharttext" valign="top">
 <td><a name="25LayoutAnchor_"/>-</td><td>はい</td><td>はい</td><td>
@@ -1796,6 +1802,7 @@
 </td><td><a href="#1065092TableAnchor_"><em>スタッフ_月別集計</em></a></td><td>オン</td><td>オフ</td><td>オン</td><td>オン</td><td>
 <ul>
 <li><a href="#3ScriptAnchor_">新規集計入力</a></li>
+<li><a href="#11ScriptAnchor_">月別個人集計検索</a></li>
 <li><a href="#6ScriptAnchor_">労働入力から集計詳細へ</a></li>
 </ul>
 </td><td>[ファイルデフォルト]</td><td></td><td><a href="#03valThemesSectionAnchor_">03</a></td>
@@ -1804,7 +1811,7 @@
 <td><a name="19LayoutAnchor_"/>労働時間詳細/入力</td><td>はい</td><td>はい</td><td>
 <ul>
 <li><a href="#19LayoutObjectsAnchor_通常フィールド">9 通常フィールド</a></li>
-<li><a href="#19LayoutObjectsAnchor_ボタン">6 ボタン</a></li>
+<li><a href="#19LayoutObjectsAnchor_ボタン">7 ボタン</a></li>
 </ul>
 </td><td><a href="#1065090TableAnchor_"><em>スタッフ_月別集計_日別労働時間</em></a></td><td>オン</td><td>オフ</td><td>オン</td><td>オフ</td><td>
 <ul>
@@ -1855,7 +1862,7 @@
 <td colspan="3">ボタンプロパティ</td><td colspan="1" width="14%">座標</td><td colspan="3" width="43%">スクリプト/スクリプトステップ</td>
 </tr>
 <tr class="regularcharttext" valign="top">
-<td colspan="3"><a name="22Button42.000000018.0000000151.0000000301.0000000LayoutObjectAnchor_"/><ul>
+<td colspan="3"><a name="22Button376.000000018.0000000485.0000000301.0000000LayoutObjectAnchor_"/><ul>
 <b>タイプ:</b>
 <li>テキスト: スタッフ情報一覧</li>
 </ul>
@@ -1865,9 +1872,9 @@
 </ul>
 </td><td colspan="1">
 <ul>
-<li>上: 42 pt</li>
+<li>上: 376 pt</li>
 <li>左: 18 pt</li>
-<li>下: 151 pt</li>
+<li>下: 485 pt</li>
 <li>右: 301 pt</li>
 </ul>
 <ul>
@@ -1890,7 +1897,7 @@
 <td colspan="3">ボタンプロパティ</td><td colspan="1" width="14%">座標</td><td colspan="3" width="43%">スクリプト/スクリプトステップ</td>
 </tr>
 <tr class="regularcharttext" valign="top">
-<td colspan="3"><a name="22Button42.0000000334.0000000151.0000000594.0000000LayoutObjectAnchor_"/><ul>
+<td colspan="3"><a name="22Button215.0000000319.0000000324.0000000602.0000000LayoutObjectAnchor_"/><ul>
 <b>タイプ:</b>
 <li>テキスト: 新規スタッフ追加</li>
 </ul>
@@ -1900,10 +1907,10 @@
 </ul>
 </td><td colspan="1">
 <ul>
-<li>上: 42 pt</li>
-<li>左: 334 pt</li>
-<li>下: 151 pt</li>
-<li>右: 594 pt</li>
+<li>上: 215 pt</li>
+<li>左: 319 pt</li>
+<li>下: 324 pt</li>
+<li>右: 602 pt</li>
 </ul>
 <ul>
 <li>アンカー: 左, 上</li>
@@ -1925,7 +1932,7 @@
 <td colspan="3">ボタンプロパティ</td><td colspan="1" width="14%">座標</td><td colspan="3" width="43%">スクリプト/スクリプトステップ</td>
 </tr>
 <tr class="regularcharttext" valign="top">
-<td colspan="3"><a name="22Button174.000000018.0000000283.0000000301.0000000LayoutObjectAnchor_"/><ul>
+<td colspan="3"><a name="22Button376.0000000319.0000000485.0000000602.0000000LayoutObjectAnchor_"/><ul>
 <b>タイプ:</b>
 <li>テキスト: 集計一覧</li>
 </ul>
@@ -1935,10 +1942,10 @@
 </ul>
 </td><td colspan="1">
 <ul>
-<li>上: 174 pt</li>
-<li>左: 18 pt</li>
-<li>下: 283 pt</li>
-<li>右: 301 pt</li>
+<li>上: 376 pt</li>
+<li>左: 319 pt</li>
+<li>下: 485 pt</li>
+<li>右: 602 pt</li>
 </ul>
 <ul>
 <li>アンカー: 左, 上</li>
@@ -1960,7 +1967,7 @@
 <td colspan="3">ボタンプロパティ</td><td colspan="1" width="14%">座標</td><td colspan="3" width="43%">スクリプト/スクリプトステップ</td>
 </tr>
 <tr class="regularcharttext" valign="top">
-<td colspan="3"><a name="22Button174.0000000336.0000000283.0000000594.0000000LayoutObjectAnchor_"/><ul>
+<td colspan="3"><a name="22Button215.000000018.0000000324.0000000301.0000000LayoutObjectAnchor_"/><ul>
 <b>タイプ:</b>
 <li>テキスト: 新規集計追加</li>
 </ul>
@@ -1970,10 +1977,10 @@
 </ul>
 </td><td colspan="1">
 <ul>
-<li>上: 174 pt</li>
-<li>左: 336 pt</li>
-<li>下: 283 pt</li>
-<li>右: 594 pt</li>
+<li>上: 215 pt</li>
+<li>左: 18 pt</li>
+<li>下: 324 pt</li>
+<li>右: 301 pt</li>
 </ul>
 <ul>
 <li>アンカー: 左, 上</li>
@@ -1995,7 +2002,7 @@
 <td colspan="3">ボタンプロパティ</td><td colspan="1" width="14%">座標</td><td colspan="3" width="43%">スクリプト/スクリプトステップ</td>
 </tr>
 <tr class="regularcharttext" valign="top">
-<td colspan="3"><a name="22Button305.000000018.0000000414.0000000301.0000000LayoutObjectAnchor_"/><ul>
+<td colspan="3"><a name="22Button376.0000000620.0000000485.0000000880.0000000LayoutObjectAnchor_"/><ul>
 <b>タイプ:</b>
 <li>テキスト: 労働時間一覧</li>
 </ul>
@@ -2005,10 +2012,10 @@
 </ul>
 </td><td colspan="1">
 <ul>
-<li>上: 305 pt</li>
-<li>左: 18 pt</li>
-<li>下: 414 pt</li>
-<li>右: 301 pt</li>
+<li>上: 376 pt</li>
+<li>左: 620 pt</li>
+<li>下: 485 pt</li>
+<li>右: 880 pt</li>
 </ul>
 <ul>
 <li>アンカー: 左, 上</li>
@@ -2030,7 +2037,7 @@
 <td colspan="3">ボタンプロパティ</td><td colspan="1" width="14%">座標</td><td colspan="3" width="43%">スクリプト/スクリプトステップ</td>
 </tr>
 <tr class="regularcharttext" valign="top">
-<td colspan="3"><a name="22Button306.0000000338.0000000415.0000000594.0000000LayoutObjectAnchor_"/><ul>
+<td colspan="3"><a name="22Button43.000000018.0000000152.0000000301.0000000LayoutObjectAnchor_"/><ul>
 <b>タイプ:</b>
 <li>テキスト: 新規労働時間入力</li>
 </ul>
@@ -2040,10 +2047,10 @@
 </ul>
 </td><td colspan="1">
 <ul>
-<li>上: 306 pt</li>
-<li>左: 338 pt</li>
-<li>下: 415 pt</li>
-<li>右: 594 pt</li>
+<li>上: 43 pt</li>
+<li>左: 18 pt</li>
+<li>下: 152 pt</li>
+<li>右: 301 pt</li>
 </ul>
 <ul>
 <li>アンカー: 左, 上</li>
@@ -2053,6 +2060,41 @@
 </p>
 <ul>
 <li><a href="#1ScriptAnchor_">新規労働時間入力</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<table width="100%" border="1">
+<tbody>
+<tr class="chartsubheads" valign="top">
+<td colspan="3">ボタンプロパティ</td><td colspan="1" width="14%">座標</td><td colspan="3" width="43%">スクリプト/スクリプトステップ</td>
+</tr>
+<tr class="regularcharttext" valign="top">
+<td colspan="3"><a name="22Button43.0000000319.0000000152.0000000602.0000000LayoutObjectAnchor_"/><ul>
+<b>タイプ:</b>
+<li>テキスト: 月別個人集計検索</li>
+</ul>
+<ul>
+<b>レイアウト名:</b>
+<li><a href="#22LayoutAnchor_">ホーム</a></li>
+</ul>
+</td><td colspan="1">
+<ul>
+<li>上: 43 pt</li>
+<li>左: 319 pt</li>
+<li>下: 152 pt</li>
+<li>右: 602 pt</li>
+</ul>
+<ul>
+<li>アンカー: 左, 上</li>
+</ul>
+</td><td colspan="3">スクリプト実行 [ 「月別個人集計検索」; 引数: "新規集計追加" ]<p>
+<b>スクリプト:</b>
+</p>
+<ul>
+<li><a href="#11ScriptAnchor_">月別個人集計検索</a></li>
 </ul>
 </td>
 </tr>
@@ -3584,7 +3626,7 @@
 <td colspan="3">ボタンプロパティ</td><td colspan="1" width="14%">座標</td><td colspan="3" width="43%">スクリプト/スクリプトステップ</td>
 </tr>
 <tr class="regularcharttext" valign="top">
-<td colspan="3"><a name="19Button120.0000000555.0000000150.0000000665.0000000LayoutObjectAnchor_"/><ul>
+<td colspan="3"><a name="19Button45.0000000730.000000075.0000000840.0000000LayoutObjectAnchor_"/><ul>
 <b>タイプ:</b>
 <li>テキスト: 労働時間一覧</li>
 </ul>
@@ -3594,10 +3636,10 @@
 </ul>
 </td><td colspan="1">
 <ul>
-<li>上: 120 pt</li>
-<li>左: 555 pt</li>
-<li>下: 150 pt</li>
-<li>右: 665 pt</li>
+<li>上: 45 pt</li>
+<li>左: 730 pt</li>
+<li>下: 75 pt</li>
+<li>右: 840 pt</li>
 </ul>
 <ul>
 <li>アンカー: 左, 上</li>
@@ -3607,6 +3649,45 @@
 </p>
 <ul>
 <li><a href="#2LayoutAnchor_">労働時間一覧</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<table width="100%" border="1">
+<tbody>
+<tr class="chartsubheads" valign="top">
+<td colspan="3">ボタンプロパティ</td><td colspan="1" width="14%">座標</td><td colspan="3" width="43%">スクリプト/スクリプトステップ</td>
+</tr>
+<tr class="regularcharttext" valign="top">
+<td colspan="3"><a name="19Button115.0000000537.0000000165.0000000642.0000000LayoutObjectAnchor_"/><ul>
+<b>タイプ:</b>
+<li>テキスト: 確定</li>
+</ul>
+<ul>
+<b>レイアウト名:</b>
+<li><a href="#19LayoutAnchor_">労働時間詳細/入力</a></li>
+</ul>
+<ul>
+<b>条件を隠す:</b>
+<li><a href="#13030FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::c出退勤入力状況</a> = 0</li>
+</ul>
+</td><td colspan="1">
+<ul>
+<li>上: 115 pt</li>
+<li>左: 537 pt</li>
+<li>下: 165 pt</li>
+<li>右: 642 pt</li>
+</ul>
+<ul>
+<li>アンカー: 左, 上</li>
+</ul>
+</td><td colspan="3">レイアウト切り替え [ 「ホーム」 (スタッフ情報) ]<p>
+<b>レイアウト:</b>
+</p>
+<ul>
+<li><a href="#22LayoutAnchor_">ホーム</a></li>
 </ul>
 </td>
 </tr>
@@ -3996,11 +4077,6 @@
 <b>レイアウト名:</b>
 <li><a href="#21LayoutAnchor_">集計一覧</a></li>
 </ul>
-<ul>
-<b>OnObjectModify</b>
-<li>スクリプト: <a href="#8ScriptAnchor_">アラート送信</a></li>
-<li>モード: ブラウズ</li>
-</ul>
 </td><td colspan="1">
 <ul>
 <li>上: 45 pt</li>
@@ -4103,7 +4179,7 @@
 <td colspan="3">ボタンプロパティ</td><td colspan="1" width="14%">座標</td><td colspan="3" width="43%">スクリプト/スクリプトステップ</td>
 </tr>
 <tr class="regularcharttext" valign="top">
-<td colspan="3"><a name="21Button45.0000000681.000000075.0000000811.0000000LayoutObjectAnchor_"/><ul>
+<td colspan="3"><a name="21Button45.0000000685.000000075.0000000815.0000000LayoutObjectAnchor_"/><ul>
 <b>タイプ:</b>
 <li>テキスト: アラート送信</li>
 </ul>
@@ -4118,9 +4194,9 @@
 </td><td colspan="1">
 <ul>
 <li>上: 45 pt</li>
-<li>左: 681 pt</li>
+<li>左: 685 pt</li>
 <li>下: 75 pt</li>
-<li>右: 811 pt</li>
+<li>右: 815 pt</li>
 </ul>
 <ul>
 <li>アンカー: 左, 上</li>
@@ -4653,6 +4729,9 @@
 <td class="script_hier"><a name="3ScriptAnchor_toc"></a><a href="#3ScriptAnchor_">新規集計入力</a></td>
 </tr>
 <tr>
+<td class="script_hier"><a name="11ScriptAnchor_toc"></a><a href="#11ScriptAnchor_">月別個人集計検索</a></td>
+</tr>
+<tr>
 <td class="script_hier"><a name="1ScriptAnchor_toc"></a><a href="#1ScriptAnchor_">新規労働時間入力</a></td>
 </tr>
 <tr>
@@ -4754,7 +4833,7 @@
 <table class="script_navbar">
 <tbody>
 <tr class="script_navbar">
-<a name="3ScriptAnchor_"></a><td class="script_navbar"><a href="#2ScriptAnchor_"><span>前のスクリプト: [新規スタッフ入力]</span></a></td><td class="script_navbar"></td><td class="script_navbar"><a href="#1ScriptAnchor_"><span>次のスクリプト: [新規労働時間入力]</span></a></td>
+<a name="3ScriptAnchor_"></a><td class="script_navbar"><a href="#2ScriptAnchor_"><span>前のスクリプト: [新規スタッフ入力]</span></a></td><td class="script_navbar"></td><td class="script_navbar"><a href="#11ScriptAnchor_"><span>次のスクリプト: [月別個人集計検索]</span></a></td>
 </tr>
 </tbody>
 </table>
@@ -4840,7 +4919,92 @@
 <table class="script_navbar">
 <tbody>
 <tr class="script_navbar">
-<a name="1ScriptAnchor_"></a><td class="script_navbar"><a href="#3ScriptAnchor_"><span>前のスクリプト: [新規集計入力]</span></a></td><td class="script_navbar"></td><td class="script_navbar"><a href="#6ScriptAnchor_"><span>次のスクリプト: [労働入力から集計詳細へ]</span></a></td>
+<a name="11ScriptAnchor_"></a><td class="script_navbar"><a href="#3ScriptAnchor_"><span>前のスクリプト: [新規集計入力]</span></a></td><td class="script_navbar"></td><td class="script_navbar"><a href="#1ScriptAnchor_"><span>次のスクリプト: [新規労働時間入力]</span></a></td>
+</tr>
+</tbody>
+</table>
+<table width="100%" border="1">
+<tbody>
+<tr class="privsetfirst" vAlign="top">
+<td width="35%">スクリプト名</td><td width="65%">月別個人集計検索</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">スクリプトを完全アクセス権で実行</td><td class="regularcharttext">オフ</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">Siri ショートカットを表示</td><td class="regularcharttext">オフ</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">メニューに表示させる</td><td class="regularcharttext">いいえ</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトを使用するレイアウト</td><td class="regularcharttext">
+<ul>
+<li><a href="#22LayoutAnchor_">ホーム</a></li>
+</ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトを使用するスクリプト</td><td class="regularcharttext">
+<ul></ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartsubheads" colSpan="2">スクリプト編集</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">スクリプトステップ</td><td class="regularcharttext">
+<ul>
+<li>レイアウト切り替え [ 「集計詳細/入力」 (スタッフ_月別集計) ]</li>
+<li>検索モードに切り替え [  ]
+[ 一時停止 ]</li>
+</ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトで使用されるフィールド</td><td class="regularcharttext">
+<ul></ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトで使用されるスクリプト</td><td class="regularcharttext">
+<ul></ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトで使用されるレイアウト</td><td class="regularcharttext">
+<ul>
+<li><a href="#16LayoutAnchor_">集計詳細/入力</a></li>
+</ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトで使用されるテーブル</td><td class="regularcharttext">
+<ul></ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトで使用されるテーブルオカレンス</td><td class="regularcharttext">
+<ul></ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトで使用されるカスタム関数</td><td class="regularcharttext">
+<ul></ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトで使用されるカスタムメニューセット</td><td class="regularcharttext">
+<ul></ul>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<table class="script_navbar">
+<tbody>
+<tr class="script_navbar">
+<a name="1ScriptAnchor_"></a><td class="script_navbar"><a href="#11ScriptAnchor_"><span>前のスクリプト: [月別個人集計検索]</span></a></td><td class="script_navbar"></td><td class="script_navbar"><a href="#6ScriptAnchor_"><span>次のスクリプト: [労働入力から集計詳細へ]</span></a></td>
 </tr>
 </tbody>
 </table>
@@ -5047,13 +5211,16 @@
 <ul>
 <li>変数を設定 [ $アラート状態; 値:スタッフ_月別集計::アラート送信状態 ]</li>
 <li>If [ (スタッフ_月別集計::c残業区分 = "C" and $アラート状態 &lt; 1) ]</li>
-<li>メールを送信 [ 電子メールクライアント経由で送信; 宛先: スタッフ情報::メールアドレス; トピック: "残業アラートC: 12時間超過のお知らせ"; メッセージ: スタッフ_月別集計::cアラート文面C ]</li>
+<li>メールを送信 [ 電子メールクライアント経由で送信; 宛先: スタッフ情報::メールアドレス; トピック: "残業アラートC: 12時間超過のお知らせ"; メッセージ: スタッフ_月別集計::cアラート文面C ]
+[ ダイアログなし ]</li>
 <li>フィールド設定 [ スタッフ_月別集計::アラート送信状態; 1 ]</li>
 <li>Else If [ (スタッフ_月別集計::c残業区分 = "B" and $アラート状態 &lt; 2) ]</li>
-<li>メールを送信 [ 電子メールクライアント経由で送信; 宛先: スタッフ情報::メールアドレス; トピック: "残業アラートB: 23時間超過のお知らせ"; メッセージ: スタッフ_月別集計::cアラート文面B ]</li>
+<li>メールを送信 [ 電子メールクライアント経由で送信; 宛先: スタッフ情報::メールアドレス; トピック: "残業アラートB: 23時間超過のお知らせ"; メッセージ: スタッフ_月別集計::cアラート文面B ]
+[ ダイアログなし ]</li>
 <li>フィールド設定 [ スタッフ_月別集計::アラート送信状態; 2 ]</li>
 <li>Else If [ (スタッフ_月別集計::c残業区分 = "A" and スタッフ_月別集計::アラート送信状態 &lt; 3) ]</li>
-<li>メールを送信 [ 電子メールクライアント経由で送信; 宛先: スタッフ情報::メールアドレス; トピック: "残業アラートA: 45時間超過のお知らせ"; メッセージ: スタッフ_月別集計::cアラート文面A ]</li>
+<li>メールを送信 [ 電子メールクライアント経由で送信; 宛先: スタッフ情報::メールアドレス; トピック: "残業アラートA: 45時間超過のお知らせ"; メッセージ: スタッフ_月別集計::cアラート文面A ]
+[ ダイアログなし ]</li>
 <li>フィールド設定 [ スタッフ_月別集計::アラート送信状態; 3 ]</li>
 <li>End If</li>
 </ul>
