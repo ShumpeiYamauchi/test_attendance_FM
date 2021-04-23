@@ -136,12 +136,12 @@
 </tr>
 <tr class="regularcharttext" vAlign="top">
 <td><a href="#132BaseTableAnchor_">月別集計</a></td><td>
-<div align="left"><a href="#132BaseTableAnchor_">19 フィールド</a> 定義済, 3 レコード</div>
+<div align="left"><a href="#132BaseTableAnchor_">20 フィールド</a> 定義済, 2 レコード</div>
 </td><td><a href="#1065092TableAnchor_"><em>スタッフ_月別集計</em></a></td>
 </tr>
 <tr class="regularcharttext" vAlign="top">
 <td><a href="#130BaseTableAnchor_">日別労働時間</a></td><td>
-<div align="left"><a href="#130BaseTableAnchor_">19 フィールド</a> 定義済, 13 レコード</div>
+<div align="left"><a href="#130BaseTableAnchor_">20 フィールド</a> 定義済, 4 レコード</div>
 </td><td><a href="#1065090TableAnchor_"><em>スタッフ_月別集計_日別労働時間</em></a></td>
 </tr>
 </tbody>
@@ -327,7 +327,6 @@
 <ul>
 <li><a href="#1LayoutAnchor_">スタッフ情報詳細/入力</a></li>
 <li><a href="#20LayoutAnchor_">スタッフ一覧</a></li>
-<li><a href="#2LayoutAnchor_">労働時間一覧</a></li>
 </ul>
 </td><td>
 <ul></ul>
@@ -377,7 +376,7 @@
 		<table width="100%" border="1">
 <tbody>
 <tr class="privsetfirst" vAlign="top">
-<td colSpan="9">テーブル名: <a name="132BaseTableAnchor_"/>月別集計 - 19 フィールド</td>
+<td colSpan="9">テーブル名: <a name="132BaseTableAnchor_"/>月別集計 - 20 フィールド</td>
 </tr>
 <tr class="chartheaders" vAlign="top">
 <td width="8%">フィールド名</td><td width="7%">タイプ</td><td width="14%">オプション</td><td width="10%">コメント</td><td width="13%">レイアウト上</td><td width="15%">リレーションシップ内</td><td width="22%">スクリプト内</td><td width="11%">値一覧内</td>
@@ -487,6 +486,34 @@
 <ul>
 <li><a href="#8ScriptAnchor_">アラート送信</a></li>
 </ul>
+</td><td>
+<ul></ul>
+</td>
+</tr>
+			<tr class="regularcharttext" vAlign="top">
+<td><a name="13227FieldAnchor_"/>c月別出退勤入力状況</td><td>計算結果, 数字</td><td><strong>計算:</strong>
+<ul>
+<li>コンテキストテーブル: <a href="#1065092TableAnchor_"><em>スタッフ_月別集計</em></a></li>
+<li>
+<strong>If</strong> ( 
+<strong>Count</strong>(<a href="#13030FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::c出退勤入力状況</a>) - <strong>Sum</strong> ( <a href="#13030FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::c出退勤入力状況</a> ) &gt; 0;
+ 0;
+ 1 )</li>
+</ul>
+<strong>データの格納:</strong>
+<ul>
+<li>繰り返し: 1</li>
+<li>計算結果を保存しない</li>
+<li>索引設定言語: 日本語</li>
+</ul>
+</td><td></td><td>
+<ul>
+<li><a href="#16LayoutAnchor_">集計詳細/入力</a></li>
+</ul>
+</td><td>
+<ul></ul>
+</td><td>
+<ul></ul>
 </td><td>
 <ul></ul>
 </td>
@@ -659,7 +686,7 @@
 </td>
 </tr>
 			<tr class="regularcharttext" vAlign="top">
-<td><a name="1328FieldAnchor_"/>対象月別ソート</td><td>標準, 数字</td><td><strong>入力値の自動化:</strong>
+<td><a name="1328FieldAnchor_"/>対象月別ソート</td><td>標準, テキスト</td><td><strong>入力値の自動化:</strong>
 <ul>
 <li>編集を許可</li>
 <li>フィールドに既存の値が存在する場合は置き換えない</li>
@@ -667,19 +694,20 @@
 </ul>
 <strong>入力値の制限:</strong>
 <ul>
-<li>データの入力時のみ</li>
+<li>常に検証する</li>
 <li>空欄不可</li>
+<li>制限値を無視した入力の禁止</li>
 </ul>
 <strong>データの格納:</strong>
 <ul>
 <li>繰り返し: 1</li>
-<li>索引: すべて</li>
+<li>索引: 最小限</li>
+<li>必要時に索引を自動作成</li>
 <li>索引設定言語: 日本語</li>
 </ul>
 </td><td></td><td>
 <ul>
 <li><a href="#16LayoutAnchor_">集計詳細/入力</a></li>
-<li><a href="#19LayoutAnchor_">労働時間詳細/入力</a></li>
 <li><a href="#21LayoutAnchor_">集計一覧</a></li>
 </ul>
 </td><td>
@@ -699,7 +727,7 @@
 </ul>
 <strong>入力値の制限:</strong>
 <ul>
-<li>データの入力時のみ</li>
+<li>常に検証する</li>
 <li>空欄不可</li>
 <li>制限値を無視した入力の禁止</li>
 <li>エラーメッセージ: スタッフ名を入力してください</li>
@@ -714,6 +742,7 @@
 <ul>
 <li><a href="#16LayoutAnchor_">集計詳細/入力</a></li>
 <li><a href="#21LayoutAnchor_">集計一覧</a></li>
+<li><a href="#2LayoutAnchor_">労働時間一覧</a></li>
 </ul>
 </td><td>
 <ul>
@@ -900,7 +929,7 @@
 			<tr class="regularcharttext" vAlign="top">
 <td><a name="1321FieldAnchor_"/>主キー</td><td>標準, 数字</td><td><strong>入力値の自動化:</strong>
 <ul>
-<li>シリアル: 作成: 作成時, 次の値: 7, 増分: 1</li>
+<li>シリアル: 作成: 作成時, 次の値: 5, 増分: 1</li>
 </ul>
 <strong>入力値の制限:</strong>
 <ul>
@@ -931,7 +960,7 @@
 		<table width="100%" border="1">
 <tbody>
 <tr class="privsetfirst" vAlign="top">
-<td colSpan="9">テーブル名: <a name="130BaseTableAnchor_"/>日別労働時間 - 19 フィールド</td>
+<td colSpan="9">テーブル名: <a name="130BaseTableAnchor_"/>日別労働時間 - 20 フィールド</td>
 </tr>
 <tr class="chartheaders" vAlign="top">
 <td width="8%">フィールド名</td><td width="7%">タイプ</td><td width="14%">オプション</td><td width="10%">コメント</td><td width="13%">レイアウト上</td><td width="15%">リレーションシップ内</td><td width="22%">スクリプト内</td><td width="11%">値一覧内</td>
@@ -995,7 +1024,7 @@
 </td>
 </tr>
 			<tr class="regularcharttext" vAlign="top">
-<td><a name="1308FieldAnchor_"/>労働開始時刻</td><td>標準, 時刻</td><td><strong>入力値の自動化:</strong>
+<td><a name="1308FieldAnchor_"/>出勤時刻</td><td>標準, 時刻</td><td><strong>入力値の自動化:</strong>
 <ul>
 <li>編集を許可</li>
 </ul>
@@ -1003,7 +1032,6 @@
 <ul>
 <li>データの入力時のみ</li>
 <li>タイプ: 時刻</li>
-<li>空欄不可</li>
 <li>エラーメッセージ: 労働開始時刻を入力してください</li>
 </ul>
 <strong>データの格納:</strong>
@@ -1028,7 +1056,7 @@
 </td>
 </tr>
 			<tr class="regularcharttext" vAlign="top">
-<td><a name="1309FieldAnchor_"/>労働終了時刻</td><td>標準, 時刻</td><td><strong>入力値の自動化:</strong>
+<td><a name="1309FieldAnchor_"/>退勤時刻</td><td>標準, 時刻</td><td><strong>入力値の自動化:</strong>
 <ul>
 <li>編集を許可</li>
 </ul>
@@ -1036,7 +1064,6 @@
 <ul>
 <li>データの入力時のみ</li>
 <li>タイプ: 時刻</li>
-<li>空欄不可</li>
 <li>エラーメッセージ: 労働終了時刻を入力してください。</li>
 </ul>
 <strong>データの格納:</strong>
@@ -1068,8 +1095,6 @@
 <strong>入力値の制限:</strong>
 <ul>
 <li>データの入力時のみ</li>
-<li>空欄不可</li>
-<li>エラーメッセージ: 休み時間を入力してください</li>
 </ul>
 <strong>データの格納:</strong>
 <ul>
@@ -1100,8 +1125,8 @@
 <strong>Ceiling</strong>(
 (
 (
-<strong>Hour</strong>( <a href="#1309FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::労働終了時刻</a> - <a href="#1308FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::労働開始時刻</a> )*60
-+ <strong>Minute</strong>( <a href="#1309FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::労働終了時刻</a> - <a href="#1308FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::労働開始時刻</a>)
+<strong>Hour</strong>( <a href="#1309FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::退勤時刻</a> - <a href="#1308FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::出勤時刻</a> )*60
++ <strong>Minute</strong>( <a href="#1309FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::退勤時刻</a> - <a href="#1308FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::出勤時刻</a>)
 - <a href="#13010FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::休み時間</a>
 )/60
 )*2
@@ -1155,6 +1180,32 @@
 </td>
 </tr>
 			<tr class="regularcharttext" vAlign="top">
+<td><a name="13030FieldAnchor_"/>c出退勤入力状況</td><td>計算結果, 数字</td><td><strong>計算:</strong>
+<ul>
+<li>コンテキストテーブル: <a href="#1065090TableAnchor_"><em>スタッフ_月別集計_日別労働時間</em></a></li>
+<li>(1 - <strong>IsEmpty</strong>(<a href="#1308FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::出勤時刻</a>)) * (1 - <strong>IsEmpty</strong>(<a href="#1309FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::退勤時刻</a>)) * (1 - <strong>IsEmpty</strong>(<a href="#13010FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::休み時間</a>))</li>
+</ul>
+<strong>データの格納:</strong>
+<ul>
+<li>繰り返し: 1</li>
+<li>索引: なし</li>
+<li>必要時に索引を自動作成</li>
+<li>索引設定言語: 日本語</li>
+</ul>
+</td><td></td><td>
+<ul>
+<li><a href="#16LayoutAnchor_">集計詳細/入力</a></li>
+<li><a href="#19LayoutAnchor_">労働時間詳細/入力</a></li>
+</ul>
+</td><td>
+<ul></ul>
+</td><td>
+<ul></ul>
+</td><td>
+<ul></ul>
+</td>
+</tr>
+			<tr class="regularcharttext" vAlign="top">
 <td><a name="13025FieldAnchor_"/>■■リレーション■■</td><td>標準, テキスト</td><td><strong>入力値の自動化:</strong>
 <ul>
 <li>編集を許可</li>
@@ -1181,20 +1232,26 @@
 </td>
 </tr>
 			<tr class="regularcharttext" vAlign="top">
-<td><a name="13014FieldAnchor_"/>c月別ソート</td><td>計算結果, 数字</td><td><strong>計算:</strong>
+<td><a name="13014FieldAnchor_"/>月別ソート</td><td>標準, テキスト</td><td><strong>入力値の自動化:</strong>
 <ul>
-<li>コンテキストテーブル: <a href="#1065090TableAnchor_"><em>スタッフ_月別集計_日別労働時間</em></a></li>
-<li>
-<strong>Year</strong>(<a href="#1307FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::労働日</a>) &amp; <strong>Right</strong> ("0" &amp; <strong>Month</strong> (<a href="#1307FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::労働日</a>); 2)</li>
+<li>編集を許可</li>
+<li>フィールドに既存の値が存在する場合は置き換えない</li>
+<li>コンテキストテーブル: <a href="#1065090TableAnchor_"><em>スタッフ_月別集計_日別労働時間</em></a><br>計算: <strong>Year</strong>(<a href="#1307FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::労働日</a>) &amp; <strong>Right</strong> ("0" &amp; <strong>Month</strong> (<a href="#1307FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::労働日</a>); 2)</li>
+</ul>
+<strong>入力値の制限:</strong>
+<ul>
+<li>データの入力時のみ</li>
 </ul>
 <strong>データの格納:</strong>
 <ul>
 <li>繰り返し: 1</li>
-<li>索引: すべて</li>
+<li>索引: 最小限</li>
+<li>必要時に索引を自動作成</li>
 <li>索引設定言語: 日本語</li>
 </ul>
 </td><td></td><td>
 <ul>
+<li><a href="#19LayoutAnchor_">労働時間詳細/入力</a></li>
 <li><a href="#2LayoutAnchor_">労働時間一覧</a></li>
 </ul>
 </td><td>
@@ -1348,7 +1405,7 @@
 			<tr class="regularcharttext" vAlign="top">
 <td><a name="1301FieldAnchor_"/>主キー</td><td>標準, 数字</td><td><strong>入力値の自動化:</strong>
 <ul>
-<li>シリアル: 作成: 作成時, 次の値: 31, 増分: 1</li>
+<li>シリアル: 作成: 作成時, 次の値: 13, 増分: 1</li>
 </ul>
 <strong>入力値の制限:</strong>
 <ul>
@@ -1512,6 +1569,35 @@
 <td width="9%">テーブルオカレンス</td><td width="13%">ソーステーブル</td><td width="11%">ソースファイル</td><td width="16%">リレーションシップ内</td><td width="12%">スクリプト内</td><td width="16%">フィールド定義内</td><td width="13%">値一覧内</td><td width="10%">関連付けられているレイアウト</td>
 </tr>
 <tr class="regularcharttext" vAlign="top">
+<td bgColor="#787878"><a name="1065090TableAnchor_"/><em>スタッフ_月別集計_日別労働時間</em></td><td><a href="#130BaseTableAnchor_">日別労働時間</a></td><td>attendance.fmp12</td><td>
+<ul>
+<li><a href="#スタッフ_月別集計&infin;スタッフ_月別集計_日別労働時間RelationshipAnchor_"><em>スタッフ_月別集計&infin;スタッフ_月別集計_日別労働時間</em></a></li>
+</ul>
+</td><td>
+<ul></ul>
+</td><td>
+<ul>
+<li><a href="#13210FieldAnchor_"><em>月別集計</em>::c累計残業時間</a></li>
+<li><a href="#1329FieldAnchor_"><em>月別集計</em>::c累計労働時間</a></li>
+<li><a href="#13227FieldAnchor_"><em>月別集計</em>::c月別出退勤入力状況</a></li>
+<li><a href="#13011FieldAnchor_"><em>日別労働時間</em>::c労働時間</a></li>
+<li><a href="#13012FieldAnchor_"><em>日別労働時間</em>::c残業時間</a></li>
+<li><a href="#13030FieldAnchor_"><em>日別労働時間</em>::c出退勤入力状況</a></li>
+<li><a href="#13014FieldAnchor_"><em>日別労働時間</em>::月別ソート</a></li>
+<li><a href="#13019FieldAnchor_"><em>日別労働時間</em>::c日付スタッフソート</a></li>
+<li><a href="#13028FieldAnchor_"><em>日別労働時間</em>::労働日スタッフユニーク</a></li>
+</ul>
+</td><td>
+<ul></ul>
+</td><td>
+<ul>
+<li><a href="#16LayoutAnchor_">集計詳細/入力</a></li>
+<li><a href="#19LayoutAnchor_">労働時間詳細/入力</a></li>
+<li><a href="#2LayoutAnchor_">労働時間一覧</a></li>
+</ul>
+</td>
+</tr>
+<tr class="regularcharttext" vAlign="top">
 <td bgColor="#787878"><a name="1065089TableAnchor_"/><em>スタッフ情報</em></td><td><a href="#129BaseTableAnchor_">スタッフ情報</a></td><td>attendance.fmp12</td><td>
 <ul>
 <li><a href="#スタッフ情報=スタッフ_月別集計RelationshipAnchor_"><em>スタッフ情報=スタッフ_月別集計</em></a></li>
@@ -1535,7 +1621,6 @@
 <ul>
 <li><a href="#1LayoutAnchor_">スタッフ情報詳細/入力</a></li>
 <li><a href="#20LayoutAnchor_">スタッフ一覧</a></li>
-<li><a href="#2LayoutAnchor_">労働時間一覧</a></li>
 </ul>
 </td>
 </tr>
@@ -1559,34 +1644,7 @@
 </td><td>
 <ul>
 <li><a href="#16LayoutAnchor_">集計詳細/入力</a></li>
-<li><a href="#19LayoutAnchor_">労働時間詳細/入力</a></li>
 <li><a href="#21LayoutAnchor_">集計一覧</a></li>
-</ul>
-</td>
-</tr>
-<tr class="regularcharttext" vAlign="top">
-<td bgColor="#787878"><a name="1065090TableAnchor_"/><em>スタッフ_月別集計_日別労働時間</em></td><td><a href="#130BaseTableAnchor_">日別労働時間</a></td><td>attendance.fmp12</td><td>
-<ul>
-<li><a href="#スタッフ_月別集計&infin;スタッフ_月別集計_日別労働時間RelationshipAnchor_"><em>スタッフ_月別集計&infin;スタッフ_月別集計_日別労働時間</em></a></li>
-</ul>
-</td><td>
-<ul></ul>
-</td><td>
-<ul>
-<li><a href="#13210FieldAnchor_"><em>月別集計</em>::c累計残業時間</a></li>
-<li><a href="#1329FieldAnchor_"><em>月別集計</em>::c累計労働時間</a></li>
-<li><a href="#13011FieldAnchor_"><em>日別労働時間</em>::c労働時間</a></li>
-<li><a href="#13012FieldAnchor_"><em>日別労働時間</em>::c残業時間</a></li>
-<li><a href="#13014FieldAnchor_"><em>日別労働時間</em>::c月別ソート</a></li>
-<li><a href="#13019FieldAnchor_"><em>日別労働時間</em>::c日付スタッフソート</a></li>
-<li><a href="#13028FieldAnchor_"><em>日別労働時間</em>::労働日スタッフユニーク</a></li>
-</ul>
-</td><td>
-<ul></ul>
-</td><td>
-<ul>
-<li><a href="#16LayoutAnchor_">集計詳細/入力</a></li>
-<li><a href="#19LayoutAnchor_">労働時間詳細/入力</a></li>
 <li><a href="#2LayoutAnchor_">労働時間一覧</a></li>
 </ul>
 </td>
@@ -1634,7 +1692,7 @@
 <td class="chartheadersnobg" width="18%">テーブルオカレンス</td><td class="regularcharttext" bgColor="#787878"><a href="#1065092TableAnchor_"><em>スタッフ_月別集計</em></a></td><td class="regularcharttext"></td><td class="regularcharttext" bgColor="#787878"><a href="#1065090TableAnchor_"><em>スタッフ_月別集計_日別労働時間</em></a></td>
 </tr>
 <tr vAlign="top">
-<td class="chartheadersnobg">フィールド</td><td class="regularcharttext"><a href="#1328FieldAnchor_">対象月別ソート</a></td><td class="regularcharttext" align="middle">=</td><td class="regularcharttext"><a href="#13014FieldAnchor_">c月別ソート</a></td>
+<td class="chartheadersnobg">フィールド</td><td class="regularcharttext"><a href="#1328FieldAnchor_">対象月別ソート</a></td><td class="regularcharttext" align="middle">=</td><td class="regularcharttext"><a href="#13014FieldAnchor_">月別ソート</a></td>
 </tr>
 <tr vAlign="top">
 <td class="chartheadersnobg" align="right">および</td><td class="regularcharttext"><a href="#1326FieldAnchor_">対象スタッフキー</a></td><td class="regularcharttext" align="middle">=</td><td class="regularcharttext"><a href="#1306FieldAnchor_">スタッフ外部キー</a></td>
@@ -1745,7 +1803,7 @@
 <tr class="regularcharttext" valign="top">
 <td><a name="19LayoutAnchor_"/>労働時間詳細/入力</td><td>はい</td><td>はい</td><td>
 <ul>
-<li><a href="#19LayoutObjectsAnchor_通常フィールド">8 通常フィールド</a></li>
+<li><a href="#19LayoutObjectsAnchor_通常フィールド">9 通常フィールド</a></li>
 <li><a href="#19LayoutObjectsAnchor_ボタン">6 ボタン</a></li>
 </ul>
 </td><td><a href="#1065090TableAnchor_"><em>スタッフ_月別集計_日別労働時間</em></a></td><td>オン</td><td>オフ</td><td>オン</td><td>オフ</td><td>
@@ -2410,7 +2468,7 @@
 <table width="100%" border="1">
 <tbody>
 <tr class="chartheaders" valign="top">
-<td colspan="6" class="privsetfirst">フィールド名: <a href="#1308FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::労働開始時刻</a></td>
+<td colspan="6" class="privsetfirst">フィールド名: <a href="#1308FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::出勤時刻</a></td>
 </tr>
 <tr class="chartsubheads" valign="top">
 <td class="chartheaders" colspan="2">フィールドプロパティ</td><td class="chartheaders" width="14%" colspan="1">座標</td><td class="chartheaders" width="17%" colspan="1">フィールド書式</td><td class="chartheaders" width="30%" colspan="1">フィールド選択時の動作</td><td class="chartheaders" width="10%" colspan="1">クイック検索</td>
@@ -2446,7 +2504,7 @@
 <table width="100%" border="1">
 <tbody>
 <tr class="chartheaders" valign="top">
-<td colspan="6" class="privsetfirst">フィールド名: <a href="#1309FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::労働終了時刻</a></td>
+<td colspan="6" class="privsetfirst">フィールド名: <a href="#1309FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::退勤時刻</a></td>
 </tr>
 <tr class="chartsubheads" valign="top">
 <td class="chartheaders" colspan="2">フィールドプロパティ</td><td class="chartheaders" width="14%" colspan="1">座標</td><td class="chartheaders" width="17%" colspan="1">フィールド書式</td><td class="chartheaders" width="30%" colspan="1">フィールド選択時の動作</td><td class="chartheaders" width="10%" colspan="1">クイック検索</td>
@@ -2759,7 +2817,7 @@
 <td colspan="3">ボタンプロパティ</td><td colspan="1" width="14%">座標</td><td colspan="3" width="43%">スクリプト/スクリプトステップ</td>
 </tr>
 <tr class="regularcharttext" valign="top">
-<td colspan="3"><a name="Button180.0000000715.0000000210.0000000835.0000000LayoutObjectAnchor_"/><ul>
+<td colspan="3"><a name="Button181.0000000780.0000000211.0000000900.0000000LayoutObjectAnchor_"/><ul>
 <b>タイプ:</b>
 <li>テキスト: 労働時間編集</li>
 </ul>
@@ -2769,10 +2827,10 @@
 </ul>
 </td><td colspan="1">
 <ul>
-<li>上: 180 pt</li>
-<li>左: 715 pt</li>
-<li>下: 210 pt</li>
-<li>右: 835 pt</li>
+<li>上: 181 pt</li>
+<li>左: 780 pt</li>
+<li>下: 211 pt</li>
+<li>右: 900 pt</li>
 </ul>
 <ul>
 <li>アンカー: 左, 上</li>
@@ -2797,7 +2855,7 @@
 <td colspan="2">ポータルプロパティ</td><td colspan="1" width="15%">座標</td><td colspan="1" width="10%">フィールド</td><td colspan="2">オプション</td>
 </tr>
 <tr class="regularcharttext" valign="top">
-<td colspan="2"><a name="16Portal177.000000026.0000000374.0000000862.0000000LayoutObjectAnchor_"/><ul>
+<td colspan="2"><a name="16Portal177.000000026.0000000374.0000000924.0000000LayoutObjectAnchor_"/><ul>
 <b>テーブル:</b>
 <li><a href="#1065090TableAnchor_"><em>スタッフ_月別集計_日別労働時間</em></a></li>
 </ul>
@@ -2810,15 +2868,15 @@
 <li>上: 177 pt</li>
 <li>左: 26 pt</li>
 <li>下: 374 pt</li>
-<li>右: 862 pt</li>
+<li>右: 924 pt</li>
 </ul>
 <ul>
 <li>アンカー: 左, 上</li>
 </ul>
 </td><td colspan="1">フィールドオブジェクト<ul>
 <li><a href="#1307FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::労働日</a> 座標 (184, 30, 209, 141)</li>
-<li><a href="#1308FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::労働開始時刻</a> 座標 (184, 141, 209, 273)</li>
-<li><a href="#1309FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::労働終了時刻</a> 座標 (184, 273, 209, 404)</li>
+<li><a href="#1308FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::出勤時刻</a> 座標 (184, 141, 209, 273)</li>
+<li><a href="#1309FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::退勤時刻</a> 座標 (184, 273, 209, 404)</li>
 <li><a href="#13010FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::休み時間</a> 座標 (184, 404, 209, 494)</li>
 <li><a href="#13011FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::c労働時間</a> 座標 (184, 536, 209, 616)</li>
 <li><a href="#13012FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::c残業時間</a> 座標 (184, 628, 209, 708)</li>
@@ -3029,7 +3087,7 @@
 <table width="100%" border="1">
 <tbody>
 <tr class="chartheaders" valign="top">
-<td colspan="6" class="privsetfirst">フィールド名: <a href="#1308FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::労働開始時刻</a></td>
+<td colspan="6" class="privsetfirst">フィールド名: <a href="#1308FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::出勤時刻</a></td>
 </tr>
 <tr class="chartsubheads" valign="top">
 <td class="chartheaders" colspan="2">フィールドプロパティ</td><td class="chartheaders" width="14%" colspan="1">座標</td><td class="chartheaders" width="17%" colspan="1">フィールド書式</td><td class="chartheaders" width="30%" colspan="1">フィールド選択時の動作</td><td class="chartheaders" width="10%" colspan="1">クイック検索</td>
@@ -3066,7 +3124,7 @@
 <table width="100%" border="1">
 <tbody>
 <tr class="chartheaders" valign="top">
-<td colspan="6" class="privsetfirst">フィールド名: <a href="#1309FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::労働終了時刻</a></td>
+<td colspan="6" class="privsetfirst">フィールド名: <a href="#1309FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::退勤時刻</a></td>
 </tr>
 <tr class="chartsubheads" valign="top">
 <td class="chartheaders" colspan="2">フィールドプロパティ</td><td class="chartheaders" width="14%" colspan="1">座標</td><td class="chartheaders" width="17%" colspan="1">フィールド書式</td><td class="chartheaders" width="30%" colspan="1">フィールド選択時の動作</td><td class="chartheaders" width="10%" colspan="1">クイック検索</td>
@@ -3248,7 +3306,7 @@
 <table width="100%" border="1">
 <tbody>
 <tr class="chartheaders" valign="top">
-<td colspan="6" class="privsetfirst">フィールド名: <a href="#1328FieldAnchor_"><em>スタッフ_月別集計</em>::対象月別ソート</a></td>
+<td colspan="6" class="privsetfirst">フィールド名: <a href="#13014FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::月別ソート</a></td>
 </tr>
 <tr class="chartsubheads" valign="top">
 <td class="chartheaders" colspan="2">フィールドプロパティ</td><td class="chartheaders" width="14%" colspan="1">座標</td><td class="chartheaders" width="17%" colspan="1">フィールド書式</td><td class="chartheaders" width="30%" colspan="1">フィールド選択時の動作</td><td class="chartheaders" width="10%" colspan="1">クイック検索</td>
@@ -3307,6 +3365,42 @@
 </td><td colspan="1">フィールド書式: <ul>
 <li>ドロップダウンカレンダー</li>
 <li>カレンダーの表示切り替え用アイコンを表示する</li>
+</ul>
+</td><td colspan="1">フィールド選択時の動作:<ul>
+<li>フィールドへの入力を許可する: 検索モード, ブラウズモード</li>
+<li>タッチキーボードタイプ: データタイプのデフォルト</li>
+<li>次のフィールドへの移動に使用するキー: Tab キー</li>
+</ul>
+</td><td colspan="1">はい</td>
+</tr>
+</tbody>
+</table>
+<br>
+<table width="100%" border="1">
+<tbody>
+<tr class="chartheaders" valign="top">
+<td colspan="6" class="privsetfirst">フィールド名: <a href="#13030FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::c出退勤入力状況</a></td>
+</tr>
+<tr class="chartsubheads" valign="top">
+<td class="chartheaders" colspan="2">フィールドプロパティ</td><td class="chartheaders" width="14%" colspan="1">座標</td><td class="chartheaders" width="17%" colspan="1">フィールド書式</td><td class="chartheaders" width="30%" colspan="1">フィールド選択時の動作</td><td class="chartheaders" width="10%" colspan="1">クイック検索</td>
+</tr>
+<tr class="regularcharttext" valign="top">
+<td colspan="2"><a name="19Field189.0000000353.0000000220.0000000432.0000000LayoutObjectAnchor_"/><ul>
+<b>レイアウト名:</b>
+<li><a href="#19LayoutAnchor_">労働時間詳細/入力</a></li>
+</ul>
+</td><td colspan="1">
+<ul>
+<li>上: 189 pt</li>
+<li>左: 353 pt</li>
+<li>下: 220 pt</li>
+<li>右: 432 pt</li>
+</ul>
+<ul>
+<li>アンカー: 左, 上</li>
+</ul>
+</td><td colspan="1">フィールド書式: <ul>
+<li>編集ボックス</li>
 </ul>
 </td><td colspan="1">フィールド選択時の動作:<ul>
 <li>フィールドへの入力を許可する: 検索モード, ブラウズモード</li>
@@ -4152,7 +4246,7 @@
 <table width="100%" border="1">
 <tbody>
 <tr class="chartheaders" valign="top">
-<td colspan="6" class="privsetfirst">フィールド名: <a href="#1308FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::労働開始時刻</a></td>
+<td colspan="6" class="privsetfirst">フィールド名: <a href="#1308FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::出勤時刻</a></td>
 </tr>
 <tr class="chartsubheads" valign="top">
 <td class="chartheaders" colspan="2">フィールドプロパティ</td><td class="chartheaders" width="14%" colspan="1">座標</td><td class="chartheaders" width="17%" colspan="1">フィールド書式</td><td class="chartheaders" width="30%" colspan="1">フィールド選択時の動作</td><td class="chartheaders" width="10%" colspan="1">クイック検索</td>
@@ -4188,7 +4282,7 @@
 <table width="100%" border="1">
 <tbody>
 <tr class="chartheaders" valign="top">
-<td colspan="6" class="privsetfirst">フィールド名: <a href="#1309FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::労働終了時刻</a></td>
+<td colspan="6" class="privsetfirst">フィールド名: <a href="#1309FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::退勤時刻</a></td>
 </tr>
 <tr class="chartsubheads" valign="top">
 <td class="chartheaders" colspan="2">フィールドプロパティ</td><td class="chartheaders" width="14%" colspan="1">座標</td><td class="chartheaders" width="17%" colspan="1">フィールド書式</td><td class="chartheaders" width="30%" colspan="1">フィールド選択時の動作</td><td class="chartheaders" width="10%" colspan="1">クイック検索</td>
@@ -4332,28 +4426,29 @@
 <table width="100%" border="1">
 <tbody>
 <tr class="chartheaders" valign="top">
-<td colspan="6" class="privsetfirst">フィールド名: <a href="#1296FieldAnchor_"><em>スタッフ情報</em>::名前</a></td>
+<td colspan="6" class="privsetfirst">フィールド名: <a href="#1326FieldAnchor_"><em>スタッフ_月別集計</em>::対象スタッフキー</a></td>
 </tr>
 <tr class="chartsubheads" valign="top">
 <td class="chartheaders" colspan="2">フィールドプロパティ</td><td class="chartheaders" width="14%" colspan="1">座標</td><td class="chartheaders" width="17%" colspan="1">フィールド書式</td><td class="chartheaders" width="30%" colspan="1">フィールド選択時の動作</td><td class="chartheaders" width="10%" colspan="1">クイック検索</td>
 </tr>
 <tr class="regularcharttext" valign="top">
-<td colspan="2"><a name="2Field45.0000000193.000000075.0000000306.0000000LayoutObjectAnchor_"/><ul>
+<td colspan="2"><a name="2Field45.0000000200.000000075.0000000298.0000000LayoutObjectAnchor_"/><ul>
 <b>レイアウト名:</b>
 <li><a href="#2LayoutAnchor_">労働時間一覧</a></li>
 </ul>
 </td><td colspan="1">
 <ul>
 <li>上: 45 pt</li>
-<li>左: 193 pt</li>
+<li>左: 200 pt</li>
 <li>下: 75 pt</li>
-<li>右: 306 pt</li>
+<li>右: 298 pt</li>
 </ul>
 <ul>
 <li>アンカー: 左, 上</li>
 </ul>
 </td><td colspan="1">フィールド書式: <ul>
-<li>編集ボックス</li>
+<li>ポップアップメニュー</li>
+<li>次の値一覧の値を表示: <a href="#1VLAnchor_">労働時間スタッフ名一覧</a></li>
 </ul>
 </td><td colspan="1">フィールド選択時の動作:<ul>
 <li>フィールドへの入力を許可する: 検索モード, ブラウズモード</li>
@@ -4368,7 +4463,7 @@
 <table width="100%" border="1">
 <tbody>
 <tr class="chartheaders" valign="top">
-<td colspan="6" class="privsetfirst">フィールド名: <a href="#13014FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::c月別ソート</a></td>
+<td colspan="6" class="privsetfirst">フィールド名: <a href="#13014FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::月別ソート</a></td>
 </tr>
 <tr class="chartsubheads" valign="top">
 <td class="chartheaders" colspan="2">フィールドプロパティ</td><td class="chartheaders" width="14%" colspan="1">座標</td><td class="chartheaders" width="17%" colspan="1">フィールド書式</td><td class="chartheaders" width="30%" colspan="1">フィールド選択時の動作</td><td class="chartheaders" width="10%" colspan="1">クイック検索</td>
@@ -4523,7 +4618,9 @@
 <li>２番目のフィールドでソート</li>
 </ul>
 </td><td>
-<ul></ul>
+<ul>
+<li><a href="#2LayoutAnchor_">労働時間一覧</a></li>
+</ul>
 </td>
 </tr>
 <tr class="regularcharttext">
