@@ -25,7 +25,7 @@
 <td class="chartheadersnobg">レイアウト</td><td class="regularcharttext"><a href="#valLayoutsSectionAnchor_">21</a></td>
 </tr>
 <tr>
-<td class="chartheadersnobg">スクリプト</td><td class="regularcharttext"><a href="#valScriptsSectionAnchor_">6</a></td>
+<td class="chartheadersnobg">スクリプト</td><td class="regularcharttext"><a href="#valScriptsSectionAnchor_">8</a></td>
 </tr>
 <tr>
 <td class="chartheadersnobg">値一覧</td><td class="regularcharttext"><a href="#valValueListsSectionAnchor_">2</a></td>
@@ -136,12 +136,12 @@
 </tr>
 <tr class="regularcharttext" vAlign="top">
 <td><a href="#132BaseTableAnchor_">月別集計</a></td><td>
-<div align="left"><a href="#132BaseTableAnchor_">20 フィールド</a> 定義済, 2 レコード</div>
+<div align="left"><a href="#132BaseTableAnchor_">20 フィールド</a> 定義済, 3 レコード</div>
 </td><td><a href="#1065092TableAnchor_"><em>スタッフ_月別集計</em></a></td>
 </tr>
 <tr class="regularcharttext" vAlign="top">
 <td><a href="#130BaseTableAnchor_">日別労働時間</a></td><td>
-<div align="left"><a href="#130BaseTableAnchor_">20 フィールド</a> 定義済, 7 レコード</div>
+<div align="left"><a href="#130BaseTableAnchor_">20 フィールド</a> 定義済, 8 レコード</div>
 </td><td><a href="#1065090TableAnchor_"><em>スタッフ_月別集計_日別労働時間</em></a></td>
 </tr>
 </tbody>
@@ -715,7 +715,9 @@
 <li><a href="#スタッフ_月別集計&infin;スタッフ_月別集計_日別労働時間RelationshipAnchor_"><em>スタッフ_月別集計&infin;スタッフ_月別集計_日別労働時間</em></a></li>
 </ul>
 </td><td>
-<ul></ul>
+<ul>
+<li><a href="#13ScriptAnchor_">月別集計：当日ID検索</a></li>
+</ul>
 </td><td>
 <ul></ul>
 </td>
@@ -750,7 +752,9 @@
 <li><a href="#スタッフ_月別集計&infin;スタッフ_月別集計_日別労働時間RelationshipAnchor_"><em>スタッフ_月別集計&infin;スタッフ_月別集計_日別労働時間</em></a></li>
 </ul>
 </td><td>
-<ul></ul>
+<ul>
+<li><a href="#13ScriptAnchor_">月別集計：当日ID検索</a></li>
+</ul>
 </td><td>
 <ul></ul>
 </td>
@@ -929,7 +933,7 @@
 			<tr class="regularcharttext" vAlign="top">
 <td><a name="1321FieldAnchor_"/>主キー</td><td>標準, 数字</td><td><strong>入力値の自動化:</strong>
 <ul>
-<li>シリアル: 作成: 作成時, 次の値: 5, 増分: 1</li>
+<li>シリアル: 作成: 作成時, 次の値: 6, 増分: 1</li>
 </ul>
 <strong>入力値の制限:</strong>
 <ul>
@@ -1005,8 +1009,7 @@
 <strong>データの格納:</strong>
 <ul>
 <li>繰り返し: 1</li>
-<li>索引: なし</li>
-<li>必要時に索引を自動作成</li>
+<li>索引: すべて</li>
 <li>索引設定言語: 日本語</li>
 </ul>
 </td><td></td><td>
@@ -1018,7 +1021,10 @@
 </td><td>
 <ul></ul>
 </td><td>
-<ul></ul>
+<ul>
+<li><a href="#12ScriptAnchor_">出退勤：当日ID検索</a></li>
+<li><a href="#13ScriptAnchor_">月別集計：当日ID検索</a></li>
+</ul>
 </td><td>
 <ul></ul>
 </td>
@@ -1291,7 +1297,10 @@
 <li><a href="#スタッフ_月別集計&infin;スタッフ_月別集計_日別労働時間RelationshipAnchor_"><em>スタッフ_月別集計&infin;スタッフ_月別集計_日別労働時間</em></a></li>
 </ul>
 </td><td>
-<ul></ul>
+<ul>
+<li><a href="#12ScriptAnchor_">出退勤：当日ID検索</a></li>
+<li><a href="#13ScriptAnchor_">月別集計：当日ID検索</a></li>
+</ul>
 </td><td>
 <ul></ul>
 </td>
@@ -1405,7 +1414,7 @@
 			<tr class="regularcharttext" vAlign="top">
 <td><a name="1301FieldAnchor_"/>主キー</td><td>標準, 数字</td><td><strong>入力値の自動化:</strong>
 <ul>
-<li>シリアル: 作成: 作成時, 次の値: 17, 増分: 1</li>
+<li>シリアル: 作成: 作成時, 次の値: 18, 増分: 1</li>
 </ul>
 <strong>入力値の制限:</strong>
 <ul>
@@ -1574,7 +1583,10 @@
 <li><a href="#スタッフ_月別集計&infin;スタッフ_月別集計_日別労働時間RelationshipAnchor_"><em>スタッフ_月別集計&infin;スタッフ_月別集計_日別労働時間</em></a></li>
 </ul>
 </td><td>
-<ul></ul>
+<ul>
+<li><a href="#12ScriptAnchor_">出退勤：当日ID検索</a></li>
+<li><a href="#13ScriptAnchor_">月別集計：当日ID検索</a></li>
+</ul>
 </td><td>
 <ul>
 <li><a href="#13210FieldAnchor_"><em>月別集計</em>::c累計残業時間</a></li>
@@ -1632,6 +1644,7 @@
 </ul>
 </td><td>
 <ul>
+<li><a href="#13ScriptAnchor_">月別集計：当日ID検索</a></li>
 <li><a href="#8ScriptAnchor_">アラート送信</a></li>
 </ul>
 </td><td>
@@ -1803,6 +1816,7 @@
 <ul>
 <li><a href="#3ScriptAnchor_">新規集計入力</a></li>
 <li><a href="#11ScriptAnchor_">月別個人集計検索</a></li>
+<li><a href="#13ScriptAnchor_">月別集計：当日ID検索</a></li>
 <li><a href="#6ScriptAnchor_">労働入力から集計詳細へ</a></li>
 </ul>
 </td><td>[ファイルデフォルト]</td><td></td><td><a href="#03valThemesSectionAnchor_">03</a></td>
@@ -1815,6 +1829,7 @@
 </ul>
 </td><td><a href="#1065090TableAnchor_"><em>スタッフ_月別集計_日別労働時間</em></a></td><td>オン</td><td>オフ</td><td>オン</td><td>オフ</td><td>
 <ul>
+<li><a href="#12ScriptAnchor_">出退勤：当日ID検索</a></li>
 <li><a href="#1ScriptAnchor_">新規労働時間入力</a></li>
 </ul>
 </td><td>[ファイルデフォルト]</td><td></td><td><a href="#03valThemesSectionAnchor_">03</a></td>
@@ -1967,9 +1982,9 @@
 <td colspan="3">ボタンプロパティ</td><td colspan="1" width="14%">座標</td><td colspan="3" width="43%">スクリプト/スクリプトステップ</td>
 </tr>
 <tr class="regularcharttext" valign="top">
-<td colspan="3"><a name="22Button215.000000018.0000000324.0000000301.0000000LayoutObjectAnchor_"/><ul>
+<td colspan="3"><a name="22Button54.0000000319.0000000163.0000000602.0000000LayoutObjectAnchor_"/><ul>
 <b>タイプ:</b>
-<li>テキスト: 新規集計追加</li>
+<li>テキスト: 今月の集計</li>
 </ul>
 <ul>
 <b>レイアウト名:</b>
@@ -1977,19 +1992,19 @@
 </ul>
 </td><td colspan="1">
 <ul>
-<li>上: 215 pt</li>
-<li>左: 18 pt</li>
-<li>下: 324 pt</li>
-<li>右: 301 pt</li>
+<li>上: 54 pt</li>
+<li>左: 319 pt</li>
+<li>下: 163 pt</li>
+<li>右: 602 pt</li>
 </ul>
 <ul>
 <li>アンカー: 左, 上</li>
 </ul>
-</td><td colspan="3">スクリプト実行 [ 「新規集計入力」; 引数: "新規集計追加" ]<p>
+</td><td colspan="3">スクリプト実行 [ 「月別集計：当日ID検索」; 引数: "新規集計追加" ]<p>
 <b>スクリプト:</b>
 </p>
 <ul>
-<li><a href="#3ScriptAnchor_">新規集計入力</a></li>
+<li><a href="#13ScriptAnchor_">月別集計：当日ID検索</a></li>
 </ul>
 </td>
 </tr>
@@ -2037,9 +2052,9 @@
 <td colspan="3">ボタンプロパティ</td><td colspan="1" width="14%">座標</td><td colspan="3" width="43%">スクリプト/スクリプトステップ</td>
 </tr>
 <tr class="regularcharttext" valign="top">
-<td colspan="3"><a name="22Button43.000000018.0000000152.0000000301.0000000LayoutObjectAnchor_"/><ul>
+<td colspan="3"><a name="22Button54.000000018.0000000163.0000000301.0000000LayoutObjectAnchor_"/><ul>
 <b>タイプ:</b>
-<li>テキスト: 新規労働時間入力</li>
+<li>テキスト: 今日の勤怠</li>
 </ul>
 <ul>
 <b>レイアウト名:</b>
@@ -2047,19 +2062,19 @@
 </ul>
 </td><td colspan="1">
 <ul>
-<li>上: 43 pt</li>
+<li>上: 54 pt</li>
 <li>左: 18 pt</li>
-<li>下: 152 pt</li>
+<li>下: 163 pt</li>
 <li>右: 301 pt</li>
 </ul>
 <ul>
 <li>アンカー: 左, 上</li>
 </ul>
-</td><td colspan="3">スクリプト実行 [ 「新規労働時間入力」 ]<p>
+</td><td colspan="3">スクリプト実行 [ 「出退勤：当日ID検索」 ]<p>
 <b>スクリプト:</b>
 </p>
 <ul>
-<li><a href="#1ScriptAnchor_">新規労働時間入力</a></li>
+<li><a href="#12ScriptAnchor_">出退勤：当日ID検索</a></li>
 </ul>
 </td>
 </tr>
@@ -2072,7 +2087,7 @@
 <td colspan="3">ボタンプロパティ</td><td colspan="1" width="14%">座標</td><td colspan="3" width="43%">スクリプト/スクリプトステップ</td>
 </tr>
 <tr class="regularcharttext" valign="top">
-<td colspan="3"><a name="22Button43.0000000319.0000000152.0000000602.0000000LayoutObjectAnchor_"/><ul>
+<td colspan="3"><a name="22Button215.000000018.0000000324.0000000301.0000000LayoutObjectAnchor_"/><ul>
 <b>タイプ:</b>
 <li>テキスト: 月別個人集計検索</li>
 </ul>
@@ -2082,10 +2097,10 @@
 </ul>
 </td><td colspan="1">
 <ul>
-<li>上: 43 pt</li>
-<li>左: 319 pt</li>
-<li>下: 152 pt</li>
-<li>右: 602 pt</li>
+<li>上: 215 pt</li>
+<li>左: 18 pt</li>
+<li>下: 324 pt</li>
+<li>右: 301 pt</li>
 </ul>
 <ul>
 <li>アンカー: 左, 上</li>
@@ -4732,6 +4747,12 @@
 <td class="script_hier"><a name="11ScriptAnchor_toc"></a><a href="#11ScriptAnchor_">月別個人集計検索</a></td>
 </tr>
 <tr>
+<td class="script_hier"><a name="12ScriptAnchor_toc"></a><a href="#12ScriptAnchor_">出退勤：当日ID検索</a></td>
+</tr>
+<tr>
+<td class="script_hier"><a name="13ScriptAnchor_toc"></a><a href="#13ScriptAnchor_">月別集計：当日ID検索</a></td>
+</tr>
+<tr>
 <td class="script_hier"><a name="1ScriptAnchor_toc"></a><a href="#1ScriptAnchor_">新規労働時間入力</a></td>
 </tr>
 <tr>
@@ -4854,7 +4875,6 @@
 <tr vAlign="top">
 <td class="chartheadersnobg">このスクリプトを使用するレイアウト</td><td class="regularcharttext">
 <ul>
-<li><a href="#22LayoutAnchor_">ホーム</a></li>
 <li><a href="#19LayoutAnchor_">労働時間詳細/入力</a></li>
 <li><a href="#21LayoutAnchor_">集計一覧</a></li>
 </ul>
@@ -4919,7 +4939,7 @@
 <table class="script_navbar">
 <tbody>
 <tr class="script_navbar">
-<a name="11ScriptAnchor_"></a><td class="script_navbar"><a href="#3ScriptAnchor_"><span>前のスクリプト: [新規集計入力]</span></a></td><td class="script_navbar"></td><td class="script_navbar"><a href="#1ScriptAnchor_"><span>次のスクリプト: [新規労働時間入力]</span></a></td>
+<a name="11ScriptAnchor_"></a><td class="script_navbar"><a href="#3ScriptAnchor_"><span>前のスクリプト: [新規集計入力]</span></a></td><td class="script_navbar"></td><td class="script_navbar"><a href="#12ScriptAnchor_"><span>次のスクリプト: [出退勤：当日ID検索]</span></a></td>
 </tr>
 </tbody>
 </table>
@@ -4935,7 +4955,7 @@
 <td class="chartheadersnobg">Siri ショートカットを表示</td><td class="regularcharttext">オフ</td>
 </tr>
 <tr vAlign="top">
-<td class="chartheadersnobg">メニューに表示させる</td><td class="regularcharttext">いいえ</td>
+<td class="chartheadersnobg">メニューに表示させる</td><td class="regularcharttext">はい</td>
 </tr>
 <tr vAlign="top">
 <td class="chartheadersnobg">このスクリプトを使用するレイアウト</td><td class="regularcharttext">
@@ -5004,7 +5024,232 @@
 <table class="script_navbar">
 <tbody>
 <tr class="script_navbar">
-<a name="1ScriptAnchor_"></a><td class="script_navbar"><a href="#11ScriptAnchor_"><span>前のスクリプト: [月別個人集計検索]</span></a></td><td class="script_navbar"></td><td class="script_navbar"><a href="#6ScriptAnchor_"><span>次のスクリプト: [労働入力から集計詳細へ]</span></a></td>
+<a name="12ScriptAnchor_"></a><td class="script_navbar"><a href="#11ScriptAnchor_"><span>前のスクリプト: [月別個人集計検索]</span></a></td><td class="script_navbar"></td><td class="script_navbar"><a href="#13ScriptAnchor_"><span>次のスクリプト: [月別集計：当日ID検索]</span></a></td>
+</tr>
+</tbody>
+</table>
+<table width="100%" border="1">
+<tbody>
+<tr class="privsetfirst" vAlign="top">
+<td width="35%">スクリプト名</td><td width="65%">出退勤：当日ID検索</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">スクリプトを完全アクセス権で実行</td><td class="regularcharttext">オフ</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">Siri ショートカットを表示</td><td class="regularcharttext">オフ</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">メニューに表示させる</td><td class="regularcharttext">はい</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトを使用するレイアウト</td><td class="regularcharttext">
+<ul>
+<li><a href="#22LayoutAnchor_">ホーム</a></li>
+</ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトを使用するスクリプト</td><td class="regularcharttext">
+<ul></ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartsubheads" colSpan="2">スクリプト編集</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">スクリプトステップ</td><td class="regularcharttext">
+<ul>
+<li>エラー処理 [ オン ]</li>
+<li>変数を設定 [ $検索ID; 値:0 ]</li>
+<li>カスタムダイアログを表示 [ タイトル: "スタッフID入力"; メッセージ: "スタッフIDを入力してください"; デフォルトボタン: 「OK」, 確定: 「はい」; ボタン 2: 「キャンセル」, 確定: 「いいえ」; 入力１: $検索ID ]</li>
+<li>If [ $検索ID &gt; 0 ]</li>
+<li>レイアウト切り替え [ 「労働時間詳細/入力」 (スタッフ_月別集計_日別労働時間) ]</li>
+<li>検索モードに切り替え [  ]</li>
+<li>フィールド設定 [ スタッフ_月別集計_日別労働時間::スタッフ外部キー; $検索ID ]</li>
+<li>フィールド設定 [ スタッフ_月別集計_日別労働時間::労働日; Get(日付) ]</li>
+<li>検索実行 [ 指定された検索条件: レコードの検索; 条件: スタッフ_月別集計_日別労働時間::スタッフ外部キー: 「1」 AND スタッフ_月別集計_日別労働時間::労働日: 「2021/04/26」 ]
+[ 記憶する ]</li>
+<li>If [ Get(対象レコード数) &gt; 0 ]</li>
+<li>ブラウズモードに切り替え</li>
+<li>Else</li>
+<li>ブラウズモードに切り替え</li>
+<li>新規レコード/検索条件</li>
+<li>フィールド設定 [ スタッフ_月別集計_日別労働時間::スタッフ外部キー; $検索ID ]</li>
+<li>フィールド設定 [ スタッフ_月別集計_日別労働時間::労働日; Get(日付) ]</li>
+<li>End If</li>
+<li>End If</li>
+<li>エラー処理 [ オフ ]</li>
+</ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトで使用されるフィールド</td><td class="regularcharttext">
+<ul>
+<li>&lt;フィールドが見つかりません&gt;</li>
+<li><a href="#1306FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::スタッフ外部キー</a></li>
+<li><a href="#1307FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::労働日</a></li>
+</ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトで使用されるスクリプト</td><td class="regularcharttext">
+<ul></ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトで使用されるレイアウト</td><td class="regularcharttext">
+<ul>
+<li><a href="#19LayoutAnchor_">労働時間詳細/入力</a></li>
+</ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトで使用されるテーブル</td><td class="regularcharttext">
+<ul>
+<li><a href="#130BaseTableAnchor_">日別労働時間</a></li>
+</ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトで使用されるテーブルオカレンス</td><td class="regularcharttext">
+<ul>
+<li><a href="#1065090TableAnchor_"><em>スタッフ_月別集計_日別労働時間</em></a></li>
+</ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトで使用されるカスタム関数</td><td class="regularcharttext">
+<ul></ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトで使用されるカスタムメニューセット</td><td class="regularcharttext">
+<ul></ul>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<table class="script_navbar">
+<tbody>
+<tr class="script_navbar">
+<a name="13ScriptAnchor_"></a><td class="script_navbar"><a href="#12ScriptAnchor_"><span>前のスクリプト: [出退勤：当日ID検索]</span></a></td><td class="script_navbar"></td><td class="script_navbar"><a href="#1ScriptAnchor_"><span>次のスクリプト: [新規労働時間入力]</span></a></td>
+</tr>
+</tbody>
+</table>
+<table width="100%" border="1">
+<tbody>
+<tr class="privsetfirst" vAlign="top">
+<td width="35%">スクリプト名</td><td width="65%">月別集計：当日ID検索</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">スクリプトを完全アクセス権で実行</td><td class="regularcharttext">オフ</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">Siri ショートカットを表示</td><td class="regularcharttext">オフ</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">メニューに表示させる</td><td class="regularcharttext">はい</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトを使用するレイアウト</td><td class="regularcharttext">
+<ul>
+<li><a href="#22LayoutAnchor_">ホーム</a></li>
+</ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトを使用するスクリプト</td><td class="regularcharttext">
+<ul></ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartsubheads" colSpan="2">スクリプト編集</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">スクリプトステップ</td><td class="regularcharttext">
+<ul>
+<li>エラー処理 [ オン ]</li>
+<li>変数を設定 [ $検索ID; 値:0 ]</li>
+<li>変数を設定 [ $検索月別コード; 値:Year(Get ( 日付 )) &amp; Right ("0" &amp; Month (Get ( 日付 )); 2) ]</li>
+<li>カスタムダイアログを表示 [ タイトル: "スタッフID入力"; メッセージ: "スタッフIDを入力してください"; デフォルトボタン: 「OK」, 確定: 「はい」; ボタン 2: 「キャンセル」, 確定: 「いいえ」; 入力１: $検索ID ]</li>
+<li>If [ $検索ID &gt; 0 ]</li>
+<li>レイアウト切り替え [ 「集計詳細/入力」 (スタッフ_月別集計) ]</li>
+<li>検索モードに切り替え [  ]</li>
+<li>フィールド設定 [ スタッフ_月別集計::対象スタッフキー; $検索ID ]</li>
+<li>フィールド設定 [ スタッフ_月別集計::対象月別ソート; $検索月別コード ]</li>
+<li>検索実行 [ 指定された検索条件: レコードの検索; 条件: スタッフ_月別集計_日別労働時間::スタッフ外部キー: 「1」 AND スタッフ_月別集計_日別労働時間::労働日: 「2021/04/26」 ]
+[ 記憶する ]</li>
+<li>If [ Get(対象レコード数) &gt; 0 ]</li>
+<li>ブラウズモードに切り替え</li>
+<li>Else</li>
+<li>ブラウズモードに切り替え</li>
+<li>新規レコード/検索条件</li>
+<li>フィールド設定 [ スタッフ_月別集計::対象スタッフキー; $検索ID ]</li>
+<li>フィールド設定 [ スタッフ_月別集計::対象月別ソート; $検索月別コード ]</li>
+<li>End If</li>
+<li>End If</li>
+<li>エラー処理 [ オフ ]</li>
+</ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトで使用されるフィールド</td><td class="regularcharttext">
+<ul>
+<li>&lt;フィールドが見つかりません&gt;</li>
+<li><a href="#1326FieldAnchor_"><em>スタッフ_月別集計</em>::対象スタッフキー</a></li>
+<li><a href="#1328FieldAnchor_"><em>スタッフ_月別集計</em>::対象月別ソート</a></li>
+<li><a href="#1306FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::スタッフ外部キー</a></li>
+<li><a href="#1307FieldAnchor_"><em>スタッフ_月別集計_日別労働時間</em>::労働日</a></li>
+</ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトで使用されるスクリプト</td><td class="regularcharttext">
+<ul></ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトで使用されるレイアウト</td><td class="regularcharttext">
+<ul>
+<li><a href="#16LayoutAnchor_">集計詳細/入力</a></li>
+</ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトで使用されるテーブル</td><td class="regularcharttext">
+<ul>
+<li><a href="#130BaseTableAnchor_">日別労働時間</a></li>
+<li><a href="#132BaseTableAnchor_">月別集計</a></li>
+</ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトで使用されるテーブルオカレンス</td><td class="regularcharttext">
+<ul>
+<li><a href="#1065092TableAnchor_"><em>スタッフ_月別集計</em></a></li>
+<li><a href="#1065090TableAnchor_"><em>スタッフ_月別集計_日別労働時間</em></a></li>
+</ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトで使用されるカスタム関数</td><td class="regularcharttext">
+<ul></ul>
+</td>
+</tr>
+<tr vAlign="top">
+<td class="chartheadersnobg">このスクリプトで使用されるカスタムメニューセット</td><td class="regularcharttext">
+<ul></ul>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+<table class="script_navbar">
+<tbody>
+<tr class="script_navbar">
+<a name="1ScriptAnchor_"></a><td class="script_navbar"><a href="#13ScriptAnchor_"><span>前のスクリプト: [月別集計：当日ID検索]</span></a></td><td class="script_navbar"></td><td class="script_navbar"><a href="#6ScriptAnchor_"><span>次のスクリプト: [労働入力から集計詳細へ]</span></a></td>
 </tr>
 </tbody>
 </table>
@@ -5025,7 +5270,6 @@
 <tr vAlign="top">
 <td class="chartheadersnobg">このスクリプトを使用するレイアウト</td><td class="regularcharttext">
 <ul>
-<li><a href="#22LayoutAnchor_">ホーム</a></li>
 <li><a href="#16LayoutAnchor_">集計詳細/入力</a></li>
 <li><a href="#2LayoutAnchor_">労働時間一覧</a></li>
 </ul>
