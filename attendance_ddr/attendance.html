@@ -141,7 +141,7 @@
 </tr>
 <tr class="regularcharttext" vAlign="top">
 <td><a href="#130BaseTableAnchor_">日別労働時間</a></td><td>
-<div align="left"><a href="#130BaseTableAnchor_">20 フィールド</a> 定義済, 8 レコード</div>
+<div align="left"><a href="#130BaseTableAnchor_">20 フィールド</a> 定義済, 9 レコード</div>
 </td><td><a href="#1065090TableAnchor_"><em>スタッフ_月別集計_日別労働時間</em></a></td>
 </tr>
 </tbody>
@@ -640,8 +640,9 @@
 </ul>
 <strong>データの格納:</strong>
 <ul>
-<li>グローバル</li>
 <li>繰り返し: 1</li>
+<li>索引: なし</li>
+<li>必要時に索引を自動作成</li>
 <li>索引設定言語: 日本語</li>
 </ul>
 </td><td></td><td>
@@ -649,7 +650,9 @@
 </td><td>
 <ul></ul>
 </td><td>
-<ul></ul>
+<ul>
+<li><a href="#8ScriptAnchor_">アラート送信</a></li>
+</ul>
 </td><td>
 <ul></ul>
 </td>
@@ -666,8 +669,9 @@
 </ul>
 <strong>データの格納:</strong>
 <ul>
-<li>グローバル</li>
 <li>繰り返し: 1</li>
+<li>索引: なし</li>
+<li>必要時に索引を自動作成</li>
 <li>索引設定言語: 日本語</li>
 </ul>
 </td><td></td><td>
@@ -675,7 +679,9 @@
 </td><td>
 <ul></ul>
 </td><td>
-<ul></ul>
+<ul>
+<li><a href="#8ScriptAnchor_">アラート送信</a></li>
+</ul>
 </td><td>
 <ul></ul>
 </td>
@@ -692,8 +698,9 @@
 </ul>
 <strong>データの格納:</strong>
 <ul>
-<li>グローバル</li>
 <li>繰り返し: 1</li>
+<li>索引: なし</li>
+<li>必要時に索引を自動作成</li>
 <li>索引設定言語: 日本語</li>
 </ul>
 </td><td></td><td>
@@ -701,7 +708,9 @@
 </td><td>
 <ul></ul>
 </td><td>
-<ul></ul>
+<ul>
+<li><a href="#8ScriptAnchor_">アラート送信</a></li>
+</ul>
 </td><td>
 <ul></ul>
 </td>
@@ -725,6 +734,7 @@
 </ul>
 </td><td></td><td>
 <ul>
+<li><a href="#16LayoutAnchor_">集計詳細/入力</a></li>
 <li><a href="#21LayoutAnchor_">集計一覧</a></li>
 </ul>
 </td><td>
@@ -1011,7 +1021,7 @@
 			<tr class="regularcharttext" vAlign="top">
 <td><a name="1321FieldAnchor_"/>主キー</td><td>標準, 数字</td><td><strong>入力値の自動化:</strong>
 <ul>
-<li>シリアル: 作成: 作成時, 次の値: 6, 増分: 1</li>
+<li>シリアル: 作成: 作成時, 次の値: 10, 増分: 1</li>
 </ul>
 <strong>入力値の制限:</strong>
 <ul>
@@ -1492,7 +1502,7 @@
 			<tr class="regularcharttext" vAlign="top">
 <td><a name="1301FieldAnchor_"/>主キー</td><td>標準, 数字</td><td><strong>入力値の自動化:</strong>
 <ul>
-<li>シリアル: 作成: 作成時, 次の値: 18, 増分: 1</li>
+<li>シリアル: 作成: 作成時, 次の値: 31, 増分: 1</li>
 </ul>
 <strong>入力値の制限:</strong>
 <ul>
@@ -1888,7 +1898,7 @@
 <tr class="regularcharttext" valign="top">
 <td><a name="16LayoutAnchor_"/>集計詳細/入力</td><td>はい</td><td>はい</td><td>
 <ul>
-<li><a href="#16LayoutObjectsAnchor_通常フィールド">10 通常フィールド</a></li>
+<li><a href="#16LayoutObjectsAnchor_通常フィールド">11 通常フィールド</a></li>
 <li><a href="#16LayoutObjectsAnchor_ボタン">6 ボタン</a></li>
 <li><a href="#16LayoutObjectsAnchor_ポータル">1 ポータル</a></li>
 <li><a href="#16LayoutObjectsAnchor_グラフィックオブジェクト">4 グラフィックオブジェクト</a></li>
@@ -1913,7 +1923,13 @@
 <li><a href="#12ScriptAnchor_">出退勤：当日ID検索</a></li>
 <li><a href="#1ScriptAnchor_">新規労働時間入力</a></li>
 </ul>
-</td><td>[ファイルデフォルト]</td><td></td><td><a href="#03valThemesSectionAnchor_">03</a></td>
+</td><td>[ファイルデフォルト]</td><td>
+<ul>
+<b>OnLayoutExit</b>
+<li>スクリプト: <a href="#8ScriptAnchor_">アラート送信</a></li>
+<li>モード: ブラウズ</li>
+</ul>
+</td><td><a href="#03valThemesSectionAnchor_">03</a></td>
 </tr>
 <tr class="regularcharttext" valign="top">
 <td><a name="24LayoutAnchor_"/>-</td><td>はい</td><td>はい</td><td>
@@ -1931,7 +1947,7 @@
 <tr class="regularcharttext" valign="top">
 <td><a name="21LayoutAnchor_"/>集計一覧</td><td>はい</td><td>はい</td><td>
 <ul>
-<li><a href="#21LayoutObjectsAnchor_通常フィールド">5 通常フィールド</a></li>
+<li><a href="#21LayoutObjectsAnchor_通常フィールド">6 通常フィールド</a></li>
 <li><a href="#21LayoutObjectsAnchor_ボタン">4 ボタン</a></li>
 </ul>
 </td><td><a href="#1065092TableAnchor_"><em>スタッフ_月別集計</em></a></td><td>オン</td><td>オフ</td><td>オン</td><td>オフ</td><td></td><td>[ファイルデフォルト]</td><td></td><td><a href="#03valThemesSectionAnchor_">03</a></td>
@@ -2766,6 +2782,42 @@
 <li>左: 628 pt</li>
 <li>下: 209 pt</li>
 <li>右: 708 pt</li>
+</ul>
+<ul>
+<li>アンカー: 左, 上</li>
+</ul>
+</td><td colspan="1">フィールド書式: <ul>
+<li>編集ボックス</li>
+</ul>
+</td><td colspan="1">フィールド選択時の動作:<ul>
+<li>フィールドへの入力を許可する: 検索モード, ブラウズモード</li>
+<li>タッチキーボードタイプ: データタイプのデフォルト</li>
+<li>次のフィールドへの移動に使用するキー: Tab キー</li>
+</ul>
+</td><td colspan="1">はい</td>
+</tr>
+</tbody>
+</table>
+<br>
+<table width="100%" border="1">
+<tbody>
+<tr class="chartheaders" valign="top">
+<td colspan="6" class="privsetfirst">フィールド名: <a href="#13223FieldAnchor_"><em>スタッフ_月別集計</em>::アラート送信状態</a></td>
+</tr>
+<tr class="chartsubheads" valign="top">
+<td class="chartheaders" colspan="2">フィールドプロパティ</td><td class="chartheaders" width="14%" colspan="1">座標</td><td class="chartheaders" width="17%" colspan="1">フィールド書式</td><td class="chartheaders" width="30%" colspan="1">フィールド選択時の動作</td><td class="chartheaders" width="10%" colspan="1">クイック検索</td>
+</tr>
+<tr class="regularcharttext" valign="top">
+<td colspan="2"><a name="16Field51.0000000800.000000076.0000000879.0000000LayoutObjectAnchor_"/><ul>
+<b>レイアウト名:</b>
+<li><a href="#16LayoutAnchor_">集計詳細/入力</a></li>
+</ul>
+</td><td colspan="1">
+<ul>
+<li>上: 51 pt</li>
+<li>左: 800 pt</li>
+<li>下: 76 pt</li>
+<li>右: 879 pt</li>
 </ul>
 <ul>
 <li>アンカー: 左, 上</li>
@@ -4196,6 +4248,42 @@
 </tbody>
 </table>
 <br>
+<table width="100%" border="1">
+<tbody>
+<tr class="chartheaders" valign="top">
+<td colspan="6" class="privsetfirst">フィールド名: <a href="#13223FieldAnchor_"><em>スタッフ_月別集計</em>::アラート送信状態</a></td>
+</tr>
+<tr class="chartsubheads" valign="top">
+<td class="chartheaders" colspan="2">フィールドプロパティ</td><td class="chartheaders" width="14%" colspan="1">座標</td><td class="chartheaders" width="17%" colspan="1">フィールド書式</td><td class="chartheaders" width="30%" colspan="1">フィールド選択時の動作</td><td class="chartheaders" width="10%" colspan="1">クイック検索</td>
+</tr>
+<tr class="regularcharttext" valign="top">
+<td colspan="2"><a name="21Field50.0000000947.000000075.00000001026.0000000LayoutObjectAnchor_"/><ul>
+<b>レイアウト名:</b>
+<li><a href="#21LayoutAnchor_">集計一覧</a></li>
+</ul>
+</td><td colspan="1">
+<ul>
+<li>上: 50 pt</li>
+<li>左: 947 pt</li>
+<li>下: 75 pt</li>
+<li>右: 1026 pt</li>
+</ul>
+<ul>
+<li>アンカー: 左, 上</li>
+</ul>
+</td><td colspan="1">フィールド書式: <ul>
+<li>編集ボックス</li>
+</ul>
+</td><td colspan="1">フィールド選択時の動作:<ul>
+<li>フィールドへの入力を許可する: 検索モード, ブラウズモード</li>
+<li>タッチキーボードタイプ: データタイプのデフォルト</li>
+<li>次のフィールドへの移動に使用するキー: Tab キー</li>
+</ul>
+</td><td colspan="1">はい</td>
+</tr>
+</tbody>
+</table>
+<br>
 <p>
 <span class="partheading"><a name="21LayoutObjectsAnchor_ボタン"/>ボタン</span>
 </p>
@@ -5536,15 +5624,15 @@
 <ul>
 <li>変数を設定 [ $アラート状態; 値:スタッフ_月別集計::アラート送信状態 ]</li>
 <li>If [ (スタッフ_月別集計::c残業区分 = "C" and $アラート状態 &lt; 1) ]</li>
-<li>メールを送信 [ 電子メールクライアント経由で送信; 宛先: スタッフ情報::メールアドレス; トピック: "残業アラートC: 12時間超過のお知らせ"; メッセージ: スタッフ_月別集計::cアラート文面C ]
+<li>メールを送信 [ 電子メールクライアント経由で送信; 宛先: スタッフ情報::メールアドレス; トピック: "残業アラートC: " &amp; GetAsText ( スタッフ_月別集計::g残業時間C ) &amp;"時間超過のお知らせ"; メッセージ: スタッフ_月別集計::cアラート文面C ]
 [ ダイアログなし ]</li>
 <li>フィールド設定 [ スタッフ_月別集計::アラート送信状態; 1 ]</li>
 <li>Else If [ (スタッフ_月別集計::c残業区分 = "B" and $アラート状態 &lt; 2) ]</li>
-<li>メールを送信 [ 電子メールクライアント経由で送信; 宛先: スタッフ情報::メールアドレス; トピック: "残業アラートB: 23時間超過のお知らせ"; メッセージ: スタッフ_月別集計::cアラート文面B ]
+<li>メールを送信 [ 電子メールクライアント経由で送信; 宛先: スタッフ情報::メールアドレス; トピック: "残業アラートC: " &amp; GetAsText ( スタッフ_月別集計::g残業時間B ) &amp;"時間超過のお知らせ"; メッセージ: スタッフ_月別集計::cアラート文面B ]
 [ ダイアログなし ]</li>
 <li>フィールド設定 [ スタッフ_月別集計::アラート送信状態; 2 ]</li>
 <li>Else If [ (スタッフ_月別集計::c残業区分 = "A" and スタッフ_月別集計::アラート送信状態 &lt; 3) ]</li>
-<li>メールを送信 [ 電子メールクライアント経由で送信; 宛先: スタッフ情報::メールアドレス; トピック: "残業アラートA: 45時間超過のお知らせ"; メッセージ: スタッフ_月別集計::cアラート文面A ]
+<li>メールを送信 [ 電子メールクライアント経由で送信; 宛先: スタッフ情報::メールアドレス; トピック: "残業アラートC: " &amp; GetAsText ( スタッフ_月別集計::g残業時間A ) &amp;"時間超過のお知らせ"; メッセージ: スタッフ_月別集計::cアラート文面A ]
 [ ダイアログなし ]</li>
 <li>フィールド設定 [ スタッフ_月別集計::アラート送信状態; 3 ]</li>
 <li>End If</li>
@@ -5557,8 +5645,11 @@
 <li><a href="#13223FieldAnchor_"><em>スタッフ_月別集計</em>::アラート送信状態</a></li>
 <li><a href="#13213FieldAnchor_"><em>スタッフ_月別集計</em>::c残業区分</a></li>
 <li><a href="#1299FieldAnchor_"><em>スタッフ情報</em>::メールアドレス</a></li>
+<li><a href="#13229FieldAnchor_"><em>スタッフ_月別集計</em>::g残業時間C</a></li>
 <li><a href="#13214FieldAnchor_"><em>スタッフ_月別集計</em>::cアラート文面C</a></li>
+<li><a href="#13230FieldAnchor_"><em>スタッフ_月別集計</em>::g残業時間B</a></li>
 <li><a href="#13215FieldAnchor_"><em>スタッフ_月別集計</em>::cアラート文面B</a></li>
+<li><a href="#13231FieldAnchor_"><em>スタッフ_月別集計</em>::g残業時間A</a></li>
 <li><a href="#13216FieldAnchor_"><em>スタッフ_月別集計</em>::cアラート文面A</a></li>
 </ul>
 </td>
