@@ -136,7 +136,7 @@
 </tr>
 <tr class="regularcharttext" vAlign="top">
 <td><a href="#132BaseTableAnchor_">月別集計</a></td><td>
-<div align="left"><a href="#132BaseTableAnchor_">20 フィールド</a> 定義済, 3 レコード</div>
+<div align="left"><a href="#132BaseTableAnchor_">23 フィールド</a> 定義済, 3 レコード</div>
 </td><td><a href="#1065092TableAnchor_"><em>スタッフ_月別集計</em></a></td>
 </tr>
 <tr class="regularcharttext" vAlign="top">
@@ -376,7 +376,7 @@
 		<table width="100%" border="1">
 <tbody>
 <tr class="privsetfirst" vAlign="top">
-<td colSpan="9">テーブル名: <a name="132BaseTableAnchor_"/>月別集計 - 20 フィールド</td>
+<td colSpan="9">テーブル名: <a name="132BaseTableAnchor_"/>月別集計 - 23 フィールド</td>
 </tr>
 <tr class="chartheaders" vAlign="top">
 <td width="8%">フィールド名</td><td width="7%">タイプ</td><td width="14%">オプション</td><td width="10%">コメント</td><td width="13%">レイアウト上</td><td width="15%">リレーションシップ内</td><td width="22%">スクリプト内</td><td width="11%">値一覧内</td>
@@ -465,9 +465,9 @@
 <li>コンテキストテーブル: <a href="#1065092TableAnchor_"><em>スタッフ_月別集計</em></a></li>
 <li>
 <strong>Case</strong>(
-<a href="#13210FieldAnchor_"><em>スタッフ_月別集計</em>::c累計残業時間</a> &lt; 12; "D";
-<a href="#13210FieldAnchor_"><em>スタッフ_月別集計</em>::c累計残業時間</a> &lt; 23; "C";
-<a href="#13210FieldAnchor_"><em>スタッフ_月別集計</em>::c累計残業時間</a> &lt; 45; "B";
+<a href="#13210FieldAnchor_"><em>スタッフ_月別集計</em>::c累計残業時間</a> &lt; <a href="#13229FieldAnchor_"><em>スタッフ_月別集計</em>::g残業時間C</a>; "D";
+<a href="#13210FieldAnchor_"><em>スタッフ_月別集計</em>::c累計残業時間</a> &lt; <a href="#13230FieldAnchor_"><em>スタッフ_月別集計</em>::g残業時間B</a>; "C";
+<a href="#13210FieldAnchor_"><em>スタッフ_月別集計</em>::c累計残業時間</a> &lt; <a href="#13231FieldAnchor_"><em>スタッフ_月別集計</em>::g残業時間A</a>; "B";
 "A")</li>
 </ul>
 <strong>データの格納:</strong>
@@ -550,7 +550,7 @@
 <li>コンテキストテーブル: <a href="#1065092TableAnchor_"><em>スタッフ_月別集計</em></a></li>
 <li><a href="#1296FieldAnchor_"><em>スタッフ情報</em>::名前</a> &amp; "さま" &amp; "&para;&para;" &amp; 
 
-"今月の残業時間が 12 時間を超過しました。"  &amp; "&para;" &amp;
+"今月の残業時間が" &amp; <strong>GetAsText</strong> ( <a href="#13229FieldAnchor_"><em>スタッフ_月別集計</em>::g残業時間C</a> ) &amp;  "時間を超過しました。"  &amp; "&para;" &amp;
 
 "残業時間の管理にご留意ください"</li>
 </ul>
@@ -578,7 +578,7 @@
 <li>コンテキストテーブル: <a href="#1065092TableAnchor_"><em>スタッフ_月別集計</em></a></li>
 <li><a href="#1296FieldAnchor_"><em>スタッフ情報</em>::名前</a> &amp; "さま" &amp; "&para;&para;" &amp; 
 
-"今月の残業時間が 23 時間を超過しました。"  &amp; "&para;" &amp;
+"今月の残業時間が" &amp; <strong>GetAsText</strong> ( <a href="#13230FieldAnchor_"><em>スタッフ_月別集計</em>::g残業時間B</a> ) &amp;  "時間を超過しました。"  &amp; "&para;" &amp;
 
 "XX様宛にご報告をお願いいたします。"</li>
 </ul>
@@ -606,7 +606,7 @@
 <li>コンテキストテーブル: <a href="#1065092TableAnchor_"><em>スタッフ_月別集計</em></a></li>
 <li><a href="#1296FieldAnchor_"><em>スタッフ情報</em>::名前</a> &amp; "さま" &amp; "&para;&para;" &amp; 
 
-"今月の残業時間が 45 時間を超過しました。"  &amp; "&para;" &amp;
+"今月の残業時間が" &amp; <strong>GetAsText</strong> ( <a href="#13231FieldAnchor_"><em>スタッフ_月別集計</em>::g残業時間A</a> ) &amp;  "時間を超過しました。"  &amp; "&para;" &amp;
 
 "YYさまへのご報告をお願いいたします。"</li>
 </ul>
@@ -624,6 +624,84 @@
 <ul>
 <li><a href="#8ScriptAnchor_">アラート送信</a></li>
 </ul>
+</td><td>
+<ul></ul>
+</td>
+</tr>
+			<tr class="regularcharttext" vAlign="top">
+<td><a name="13229FieldAnchor_"/>g残業時間C</td><td>標準, 数字</td><td><strong>入力値の自動化:</strong>
+<ul>
+<li>定数データ: 18</li>
+<li>編集を許可</li>
+</ul>
+<strong>入力値の制限:</strong>
+<ul>
+<li>データの入力時のみ</li>
+</ul>
+<strong>データの格納:</strong>
+<ul>
+<li>グローバル</li>
+<li>繰り返し: 1</li>
+<li>索引設定言語: 日本語</li>
+</ul>
+</td><td></td><td>
+<ul></ul>
+</td><td>
+<ul></ul>
+</td><td>
+<ul></ul>
+</td><td>
+<ul></ul>
+</td>
+</tr>
+			<tr class="regularcharttext" vAlign="top">
+<td><a name="13230FieldAnchor_"/>g残業時間B</td><td>標準, 数字</td><td><strong>入力値の自動化:</strong>
+<ul>
+<li>定数データ: 23</li>
+<li>編集を許可</li>
+</ul>
+<strong>入力値の制限:</strong>
+<ul>
+<li>データの入力時のみ</li>
+</ul>
+<strong>データの格納:</strong>
+<ul>
+<li>グローバル</li>
+<li>繰り返し: 1</li>
+<li>索引設定言語: 日本語</li>
+</ul>
+</td><td></td><td>
+<ul></ul>
+</td><td>
+<ul></ul>
+</td><td>
+<ul></ul>
+</td><td>
+<ul></ul>
+</td>
+</tr>
+			<tr class="regularcharttext" vAlign="top">
+<td><a name="13231FieldAnchor_"/>g残業時間A</td><td>標準, 数字</td><td><strong>入力値の自動化:</strong>
+<ul>
+<li>定数データ: 45</li>
+<li>編集を許可</li>
+</ul>
+<strong>入力値の制限:</strong>
+<ul>
+<li>データの入力時のみ</li>
+</ul>
+<strong>データの格納:</strong>
+<ul>
+<li>グローバル</li>
+<li>繰り返し: 1</li>
+<li>索引設定言語: 日本語</li>
+</ul>
+</td><td></td><td>
+<ul></ul>
+</td><td>
+<ul></ul>
+</td><td>
+<ul></ul>
 </td><td>
 <ul></ul>
 </td>
@@ -1650,6 +1728,9 @@
 </td><td>
 <ul>
 <li><a href="#13213FieldAnchor_"><em>月別集計</em>::c残業区分</a></li>
+<li><a href="#13214FieldAnchor_"><em>月別集計</em>::cアラート文面C</a></li>
+<li><a href="#13215FieldAnchor_"><em>月別集計</em>::cアラート文面B</a></li>
+<li><a href="#13216FieldAnchor_"><em>月別集計</em>::cアラート文面A</a></li>
 <li><a href="#13224FieldAnchor_"><em>月別集計</em>::月別スタッフユニーク</a></li>
 </ul>
 </td><td>
